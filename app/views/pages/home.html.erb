@@ -22,9 +22,14 @@
 <% end %>-->
 
 <div class="circle">
-  <h1 class="pronet-name">ProNet</h1>
+  <h1 class="pronet-name">Globalink</h1>
   <div class="circle-content">
-    <h3>Sign Up</h3>
+    <% if user_signed_in? %>
+      <h3 id="rl"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></h3>
+    <%else%>
+      <h3 id="rl"><%= link_to('Sign Up', new_user_registration_path, {style: "color: #fff"})%></h3>
+      <p id="rl">Already have an account? <%= link_to('Login', new_user_session_path)%></p>
+    <%end%>
   </div>
 </div>
 
