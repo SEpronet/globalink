@@ -27,6 +27,38 @@ box-shadow:
 	0 1px 2px rgba(0,0,0,0.1);
 }
 
+.circle-content{
+	margin-top:-80%;
+	margin-left: auto;
+	margin-right: auto;
+	background: rgba(63,147,147, 0.8);
+	width: inherit;
+	height: inherit;
+	border-radius: 50%;
+	overflow: hidden;
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+	transform: scale(0);
+}
+
+.circle-content h3 {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 80px;
+	margin: 0 30px;
+	padding: 40% 0 0 0;
+	height: 140px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	text-shadow: 
+		0 0 1px #fff, 
+		0 1px 2px rgba(0,0,0,0.3);
+}
+ .circle:hover .circle-content{
+ 	transform: scale(1);
+	opacity: 1;
+ }
+
 body{
 	overflow: scroll;
 }
