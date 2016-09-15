@@ -8,3 +8,4 @@ only for the memebers using mac.
 Could have added it to the ignore list but there are a few non-default gems in there, that are essential for our website. 
 We can add it for ignore once everyone has the first commit set up. 
 
+Test change for pull request from Rusty.
