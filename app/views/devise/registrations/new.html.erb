@@ -9,14 +9,14 @@
       <%= f.text_field :firstname, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :firstname %>     
+      <%= f.label "First Name" %>     
     </div>
 
        <div class="group">
       <%= f.text_field :lastname, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :lastname %>     
+      <%= f.label "Last Name" %>     
     </div>
 
     <div class="group">
@@ -39,14 +39,6 @@
       <span class="bar"></span>
       <%= f.label :password_confirmation %>     
     </div>
-
-    
-      <!-- ===============Profile photo============== 
-      <%= f.file_field :avatar, autocomplete: "off", required: true %>
-      <span class="bar"></span>
-      <%= f.label :avatar %>
-      ================================================-->     
-        
 
     <!--<div class="field">
       <%= f.label :email %><br />
