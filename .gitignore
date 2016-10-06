@@ -12,3 +12,7 @@ config/database.yml
 #ignore everything in tmp except .keep
 /tmp/
 !/tmp/.keep
+
+#ignoring logs
+/log/
+!/log/.keep
