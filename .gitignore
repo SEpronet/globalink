@@ -1,14 +1,8 @@
 #ignore
 
-/log/*
-!/log/.keep
-
 config/.vscode/
 
 
 #different for every person's machine
 config/database.yml
 
-#ignore everything in tmp except .keep
-/tmp/
-!/tmp/.keep
