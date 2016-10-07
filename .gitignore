@@ -2,6 +2,10 @@
 
 config/.vscode/
 
+/log
+
+/tmp
+
 
 #different for every person's machine
 config/database.yml
