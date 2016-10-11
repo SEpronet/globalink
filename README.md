@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Database and Server: https://codeshare.io/1PIS9
 =======
 # Last push: 
@@ -14,3 +15,5 @@ We can add it for ignore once everyone has the first commit set up.
 
 Test change for pull request from Rusty.
 >>>>>>> akshat_dev
+=======
+>>>>>>> master

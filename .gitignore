@@ -9,6 +9,12 @@ config/.vscode/
 #different for every person's machine
 config/database.yml
 
+<<<<<<< HEAD
 #ignore everything in tmp except .keep
 /tmp/
 !/tmp/.keep
+=======
+/log
+
+/tmp
+>>>>>>> master
