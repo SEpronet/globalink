@@ -41,6 +41,12 @@
     </div>
 
     <div class="group">
+      <%= f.text_field :title, autocomplete: "off", class: 'input', required: true %>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <%= f.label :title %>  
+
+    <div class="group">
       <%= f.text_field :education, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
