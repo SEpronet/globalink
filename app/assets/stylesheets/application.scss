@@ -15,3 +15,51 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+#searchButton {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 2px 5px;
+  font-size: 15px;
+  font-family: "Oswald",sans-serif;
+  line-height: 1.8;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+#searchButton:focus {
+  outline: none
+}
+
+section.border #searchButton {
+  color: #6496c8;
+  background: rgba(0,0,0,0);
+  border-radius: 8px;
+  border: solid 5px #6496c8;
+}
+section.border #searchButton:hover,
+section.border #searchButton.hover {
+  border-color: #346392;
+  color: #346392;
+}
+section.border #searchButton:active,
+section.border #searchButton.active {
+  border-color: #27496d;
+  color: #27496d;
+}
+
+nav {
+  float: center;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.border{
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+
+
