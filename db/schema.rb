@@ -27,8 +27,11 @@ ActiveRecord::Schema.define(version: 20160923201405) do
     t.datetime "updated_at",                          null: false
     t.string   "firstname"
     t.string   "lastname"
+<<<<<<< HEAD
     t.string   "title"
     t.string   "education"
+=======
+>>>>>>> akshat_dev
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"

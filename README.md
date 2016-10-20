@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Database and Server: https://codeshare.io/1PIS9
 =======
+=======
+>>>>>>> akshat_dev
 # Last push: 
 * Stylized forms
 * :firstname :lastname signup fields. 
