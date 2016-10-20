@@ -4,4 +4,8 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def newsfeed
+  	@post = Post.new
+  end
 end

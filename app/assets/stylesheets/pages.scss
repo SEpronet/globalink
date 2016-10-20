@@ -4,7 +4,7 @@
 
 .circle
 {
-margin-top: 20px;
+margin-top: 30px;
 margin-left: auto;
 margin-right: auto;
 width:600px;
@@ -14,7 +14,7 @@ color:#fff;
 font-size:260px;
 line-height:400px;
 text-align:center;
-background:#cce6ff;
+background:#94E6FF;
 box-shadow: 
 	inset 0 0 0 16px rgba(255,255,255,0.6),
 	0 1px 2px rgba(0,0,0,0.1);
@@ -23,7 +23,7 @@ transition: all 0.4s ease-in-out;
 
 
 .circle-content{
-	margin-top:-67%;
+	margin-top:-66.7%;
 	margin-left: auto;
 	margin-right: auto;
 	background: rgba(63,147,147, 0.8);
@@ -89,6 +89,11 @@ box-shadow:
 body{
 	overflow: scroll;
 }
+
+.bg{
+	background-color: #3B99E5 !important;
+}
+
 .pronet-name {
 	
 	display: inline;
@@ -105,9 +110,7 @@ body{
 	color: rgba(255,0,0,0.5);   
 }
 
-.bg {
-	background-color: #ffffcc;
-}
+
 
 .bg-image{
 	opacity: 0.8;
@@ -128,7 +131,7 @@ body{
 
 .desc-box{
 	bottom: -100%;
-	background: #004d99;
+	background: #273340;
 	height: 400px;
 	width: 100%;
 	margin-top: 10%;
@@ -138,9 +141,9 @@ body{
 }
 
 .text{
-	color: black;
+	color: #fff;
 	font: Georgia;
-	margin: 5% 5%;
+	margin: 5% 15%;
 	display: block;
 }
 
@@ -250,4 +253,12 @@ button.btn:active{
 	margin-left: 0px;
 }
 
+<<<<<<< HEAD
 
+=======
+/*******POSTS*************/
+
+#post-label{
+	margin-top: 20px;
+}
+>>>>>>> origin/akshat_Dev
