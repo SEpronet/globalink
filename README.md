@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-Database and Server: https://codeshare.io/1PIS9
-=======
-=======
->>>>>>> akshat_dev
 # Last push: 
 * Stylized forms
 * :firstname :lastname signup fields. 
@@ -17,6 +10,3 @@ Could have added it to the ignore list but there are a few non-default gems in t
 We can add it for ignore once everyone has the first commit set up. 
 
 Test change for pull request from Rusty.
->>>>>>> akshat_dev
-=======
->>>>>>> master

@@ -6,12 +6,7 @@ class ApplicationController < ActionController::Base
   protected 
   def configure_permitted_parameters
 
-<<<<<<< HEAD
-
-  devise_parameter_sanitizer.permit(:sign_up, keys: [:firstname, :lastname, :avatar, :title, :education])
-=======
   	devise_parameter_sanitizer.permit(:sign_up, keys: [:firstname, :lastname, :avatar])
->>>>>>> akshat_dev
 
   end
 
