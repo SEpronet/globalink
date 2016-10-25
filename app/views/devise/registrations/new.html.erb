@@ -39,21 +39,6 @@
       <span class="bar"></span>
       <%= f.label :password_confirmation %>     
     </div>
-
-    <div class="group">
-      <%= f.text_field :title, autocomplete: "off", class: 'input', required: true %>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <%= f.label :title %>     
-    </div>
-
-    <div class="group">
-      <%= f.text_field :education, autocomplete: "off", class: 'input', required: true %>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <%= f.label :education %>     
-    </div>
-
     
       <!-- ===============Profile photo============== 
       <%= f.file_field :avatar, autocomplete: "off", required: true %>
@@ -81,7 +66,7 @@
     </div>-->
 
     <div class = "btn-2">
-      <center><%= f.submit "Sign up", class: 'butn' %>
+      <center><%= f.submit "Sign up", class: 'btn' %>
     </div>
 <% end %>
 

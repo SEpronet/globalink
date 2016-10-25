@@ -170,7 +170,7 @@ input:focus ~ .highlight {
 
 /* Button=================================*/
 
-.butn {
+.btn {
   background-color: #e7e5e4;
   color: #404040;
   cursor: pointer;
@@ -178,8 +178,13 @@ input:focus ~ .highlight {
   font-size:20px;
   font-weight: bold;
   line-height: 45px;
+<<<<<<< HEAD
+  margin: 0 auto 2em;
+  max-width: 250px; 
+=======
   margin: 0 auto 0;
   max-width: 235px;
+>>>>>>> origin/akshat_Dev
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
