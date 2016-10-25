@@ -12,8 +12,10 @@
                 </div>
                 <div class="card-info"> 
     	    <span class="card-title"><%= current_user.firstname %> <%= current_user.lastname %></span></br>
-    	    <span class="card-title">Title: <%= current_user.title %></span></br>
-    	    <span class="card-title">Education: <%= current_user.education %></span></br>
+    	    <%if false%>
+                <span class="card-title">Title: <%= current_user.title %></span></br>
+    	       <span class="card-title">Education: <%= current_user.education %></span></br>
+            <%end%>
                 </div>  
         </div>
     </div>
