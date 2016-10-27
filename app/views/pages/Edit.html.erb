@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container">
+  <h1><%= current_user.firstname%> <%= current_user.lastname%></h1>
+    <form>
+      <!--<div class="form-group">
+        <label for="profilePicture">Upload Your Photo</label>
+        <input type="image" class="form-control-file" id="exampleInputFile" >
+      </div> -->
+      <div class="form-group">
+        <strong>Job Experience</strong>::
+        <textarea class="form-control" rows="5" id="info1"></textarea>
+      </div>
+
+    <div class="form-group">
+       <strong>Skill</strong>:
+      <textarea class="form-control" rows="5" id="info2"></textarea>
+    </div>
+    <div class="form-group">
+      <strong>Contact Info</strong>:
+      <textarea class="form-control" rows="5" id="info3"></textarea>
+    </div>
+    <button type="submit" onclick="displayInfo()" class="btn btn-primary" onclick="displayInfo()">Save</button>
+  </form>
+</div>
+
+<script>
+function displayInfo() {
+  document.getElementById('info1').innerHTML = 'Hello JavaScript!'
+  alert("Info Saved");
+
+}
+</script>
+
+</body>
+</html>

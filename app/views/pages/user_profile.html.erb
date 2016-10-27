@@ -6,19 +6,19 @@
                 <img class="card-bkimg"><%= image_tag("default.jpeg", :alt => "Globalink") %>
                 <!-- http://lorempixel.com/850/280/people/9/ -->
             </div>
-             
+
                 <div class="useravatar">
                     <%= image_tag("default.jpeg", :alt => "Globalink") %>
                 </div>
-                <div class="card-info"> 
+                <div class="card-info">
     	    <span class="card-title"><%= current_user.firstname %> <%= current_user.lastname %></span></br>
     	    <%if false%>
                 <span class="card-title">Title: <%= current_user.title %></span></br>
     	       <span class="card-title">Education: <%= current_user.education %></span></br>
             <%end%>
-                </div>  
+                </div>
         </div>
     </div>
 
-    
+
 </body>
