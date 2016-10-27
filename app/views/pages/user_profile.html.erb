@@ -1,6 +1,6 @@
 
+<body class="card-fields>
 
-<body>
     <div class= "card-box">
         <div class="card hovercard">
             <div class="card-background">
@@ -12,13 +12,141 @@
                 </div>
                 <div class="card-info"> 
     	    <span class="card-title"><%= current_user.firstname %> <%= current_user.lastname %></span></br>
+    	    <input type=button value="Edit Profile" </input>
     	    <%if false%>
                 <span class="card-title">Title: <%= current_user.title %></span></br>
     	       <span class="card-title">Education: <%= current_user.education %></span></br>
             <%end%>
                 </div>  
         </div>
+<div class = "info-summary">
+	<table width = "100%">
+		<tr>
+			<th width = "20%", rowspan = "2">
+				<div align="center">
+					<%= image_tag("information.png", :alt => "Information") %>
+				</div>
+			</th>
+			<th width= "80%", colspan = "2">
+				 <font color = "orange">Summary</font>
+			</th>
+		</tr>
+		<tr>
+			<td>Hi! My name is Student1. I am a software engineer at San Jose State University.</td>
+		</tr>
+	</table>
+</div>
+<div class = "info-education">
+	<table width = "100%">
+		<tr>
+			<th width = "20%", rowspan = "6">
+				<div align="center">
+					<%= image_tag("education.png", :alt => "Education") %>
+				</div>
+			</th>
+			<th width= "80%", colspan = "2">
+				 <font color = "orange">Education</font>
+			</th>
+		</tr>
+		<tr>
+			<td width = "40%">School</td>
+			<td width = "40%"><%=current_user.education%></td>
+		</tr>
+		<tr>
+			<td width = "40%">Degree</td>
+			<td width = "40%">Bachelor's of Science</td>
+		</tr>
+		<tr>
+			<td width = "40%">Major</td>
+			<td width = "40%">Software Engineering</td>
+		</tr>
+		<tr>
+			<td width = "40%">Minor</td>
+			<td width = "40%">Mathematics</td>
+		</tr>		
+		<tr>
+			<td width = "40%">GPA</td>
+			<td width = "40%">4.0</td>
+		</tr>
+	</table>
+</div>
+<div class = "info-experience">
+	<table width = "100%">
+		<tr>
+			<th width = "20%", rowspan = "3">
+				<div align="center">
+					<%= image_tag("experience.png", :alt => "Experience") %>
+				</div>
+			</th>
+			<th width= "80%", colspan = "2">
+				 <font color = "orange">Experience</font>
+			</th>
+		</tr>
+		<tr>
+			<td width = "20%">Job1</td>
+			<td width = "60%">Experienced in programming<br>
+			Used Java</td>
+		</tr>
+	</table>
+</div>
+<div class = "info-skills">
+	<table width = "100%">
+		<tr>
+			<th width = "20%", rowspan = "5">
+				<div align="center">
+					<%= image_tag("skills.png", :alt => "Skills") %>
+				</div>
+			</th>
+			<th width= "60%">
+				 <font color = "orange">Skills</font>
+			</th>
+			<th width= "20%">
+				 <font color = "orange">Endorsements</font>
+			</th>
+		</tr>
+		<tr>
+			<td width = "40%">Java</td>
+			<td width = "40%"></td>
+		</tr>
+		<tr>
+			<td width = "40%">Python</td>
+			<td width = "40%"></td>
+		</tr>
+		<tr>
+			<td width = "40%">Swift</td>
+			<td width = "40%"></td>
+		</tr>
+		<tr>
+			<td width = "40%">Ruby on Rails</td>
+			<td width = "40%"></td>
+		</tr>
+	</table>
+</div>
+<div class = "info-extracurricular-activities">
+	<table width = "100%">
+		<tr>
+			<th width = "20%", rowspan = "5">
+				<div align="center">
+					<%= image_tag("extracurricular-activities.png", :alt => "Information") %>
+				</div>
+			</th>
+			<th width= "80%", colspan = "2">
+				 <font color = "orange">Extracurricular Activities</font>
+			</th>
+		</tr>
+		<tr>
+			<td>Procrastinating</td>
+		</tr>
+		<tr>
+			<td>Watching Videos on Youtube</td>
+		</tr>
+		<tr>
+			<td>Partying Hard on Weekends</td>
+		</tr>
+		<tr>
+			<td>Sleeping</td>
+		</tr>
+	</table>
+</div>
     </div>
-
-    
 </body>
