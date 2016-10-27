@@ -4,7 +4,7 @@
 
 .circle
 {
-margin-top: 80px;
+margin-top: 30px;
 margin-left: auto;
 margin-right: auto;
 width:600px;
@@ -151,7 +151,7 @@ body{
 
 //Profile
 
-/* USER PROFILE PAGE */
+/******************************************* USER PROFILE PAGE *****************************/
 .card-box{
 	position: absolute;
 	margin-top: 0;
@@ -253,6 +253,7 @@ button.btn:active{
 	margin-left: 0px;
 }
 
+
 .about{
 	background: #A8CCCC;
 }
@@ -311,3 +312,151 @@ button.btn:active{
 .about #line-it{
 	display:inline-block;
 }
+
+/*******POSTS*********************************************************************/
+
+.posts{
+	background-image:
+	    linear-gradient(to right, #89B7C4, #B1EDFF);
+	width: 1000px;
+	display: block;
+	margin: 20px auto;
+}
+
+.posts .create-post{
+	border-radius: 5px;
+	width: 900px;
+	height: 200px;
+	margin-bottom: 25px;
+	background: #046380;
+	padding: 5px;
+	 -webkit-box-shadow: 0 15px 17px -6px rgba(50, 50, 50, 0.5);
+       -moz-box-shadow: 0 15px 17px -6px rgba(50, 50, 50, 0.5);
+            box-shadow: 0 15px 17px -6px rgba(50, 50, 50, 0.5);
+}
+
+.create-post .create-item{
+	margin: 0 auto;
+	text-align: center;
+}
+
+.create-item .heading{
+	font-size: 18px;
+	font: Georgia;
+	color: #E6E2AF;
+}
+
+.create-item .text-area{
+	margin: 10px;
+	width: 500px;
+	height: 80px;
+	resize: none;
+	word-wrap: break-word;
+}
+
+.create-item .submit-post{
+	display: block;
+	width: 100px;
+	margin: 5px auto;
+	font-size: 16px;
+	color: white;
+	background: #0584AB;
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.7), 
+				inset 0 2px 0 -1px rgba(98, 98, 98, 0.5), 0 3px 7px -3px rgba(0, 0, 0, 0.7);
+}
+
+.submit-post:hover{
+	background: #047092;
+	transition: all 0.4s ease-in-out;
+}
+
+.posts .post-block{
+	display: block;
+	position: relative;
+	width: 900px;
+	margin-top: 50px;
+	padding: 5px;
+	border-radius: 4px;
+	background: #7CA6B3;
+	padding: 20px;
+	-webkit-box-shadow: inset 0 -2px 19px 5px rgba(50, 50, 50, 0.31);
+       -moz-box-shadow: inset 0 -2px 19px 5px rgba(50, 50, 50, 0.31);
+            box-shadow: inset 0 -2px 19px 5px rgba(50, 50, 50, 0.31);
+}
+
+.post-block .screw .left-top{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 20px;
+}
+
+.post-block .screw .right-top{
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 20px;
+}
+
+.post-block .screw .right-bottom{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 20px;
+}
+
+.post-block .screw .left-bottom{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 20px;
+}
+
+.post-block .post-unit{
+	position: relative;
+	display: block;
+	height: 150px;
+	width: 600px;
+	background: #046E8F;
+	border-radius: 2px;
+	margin: 20px auto;
+	padding: 10px 25px;
+	-webkit-box-shadow: 0 15px 20px -6px rgba(50, 50, 50, 0.5);
+       -moz-box-shadow: 0 15px 20px -6px rgba(50, 50, 50, 0.5);
+            box-shadow: 0 15px 20px -6px rgba(50, 50, 50, 0.5);
+	pointer-events: none;
+}
+
+.post-unit .destroy{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 10px;
+	pointer-events: auto;
+}
+
+.post-unit:hover{
+	filter: blur(2px);
+	transition: all 0.4s ease-in-out;
+}
+
+.post-unit .name{
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.post-unit .post-content{
+	font-size: 14px;
+	margin: 15px 0;
+	height: 75px;
+	width: 530px;
+	border: 1px solid;
+	border-radius: 1px;
+	padding: 4px;
+	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.7), 
+				inset 0 2px 0 -1px rgba(98, 98, 98, 0.5), 0 1px 2px -1px rgba(0, 0, 0, 0.7);
+}
+
+/**************************************************************************/
+

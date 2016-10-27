@@ -4,6 +4,7 @@
     <title>Pronet</title>
     <%= csrf_meta_tags %>
 
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -18,7 +19,7 @@
         <a class="nav-link" href="user_profile">Profile <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">NewsFeed</a>
+        <a class="nav-link" href="newsfeed">NewsFeed</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">MyConnect</a>
@@ -48,6 +49,8 @@
         <a class="nav-link" href="/users/sign_up">Sign Up</a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="about">About</a>
+      </li>
   </nav>
   
   <% end %>  

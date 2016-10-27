@@ -1,0 +1,32 @@
+
+<body class = "posts">
+
+<div class="create-post">
+  <%= form_for(@post) do |f| %>
+    <div class="create-item">
+      <div class = "heading">Update Status</div>
+      <%= f.text_area :content, class: 'text-area', autofocus: true %>
+    </div>
+    <div class="create-item">
+      <%= f.submit 'Post', class: 'submit-post'%>
+    </div>
+  <% end %>
+</div>
+
+  <div class = "post-block">
+      <div class = "screw">
+        <div class = "left-top"><%= image_tag("screw.png", :alt => "GlobalinkIcon", :size => '32x32') %></div>
+        <div class = "right-top"><%= image_tag("screw.png", :alt => "GlobalinkIcon", :size => '32x32') %></div>
+        <div class = "right-bottom"><%= image_tag("screw.png", :alt => "GlobalinkIcon", :size => '32x32') %></div>
+        <div class = "left-bottom"><%= image_tag("screw.png", :alt => "GlobalinkIcon", :size => '32x32') %></div>
+      </div>
+    <% @posts.each do |post| %>
+        <div class = "post-unit">
+            <div class = "name"><%= post.user.firstname %> <%= post.user.lastname %> </br></div>
+            <div class = "post-content"><%= post.content %></br></div>
+            <div class = "destroy"><%= link_to image_tag("destroy.png", :alt => "Delete", :size => '16x16'), 
+                post, method: :delete, data: { confirm: 'Are you sure?' } %></br></div>
+        </div>
+    <% end %>
+  </div>
+</body>
