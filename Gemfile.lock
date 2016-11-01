@@ -199,4 +199,8 @@ DEPENDENCIES
   web-console
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.13.5
+=======
+   1.13.6
+>>>>>>> master
