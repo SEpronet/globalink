@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 <body class = "form-bg">
 <h1 class="elegantshadow">Sign Up</h1>
 
+=======
+
+<h1 class="elegantshadow">Sign Up</h1>
+
+>>>>>>> origin/Jordan_Dev
 <div class="relative">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -9,14 +15,22 @@
       <%= f.text_field :firstname, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
+<<<<<<< HEAD
       <%= f.label :firstname %>     
+=======
+      <%= f.label "First Name" %>     
+>>>>>>> origin/Jordan_Dev
     </div>
 
        <div class="group">
       <%= f.text_field :lastname, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
+<<<<<<< HEAD
       <%= f.label :lastname %>     
+=======
+      <%= f.label "Last Name" %>     
+>>>>>>> origin/Jordan_Dev
     </div>
 
     <div class="group">
@@ -40,6 +54,7 @@
       <%= f.label :password_confirmation %>     
     </div>
 
+<<<<<<< HEAD
     <%if false%>
     <div class="group">
       <%= f.text_field :title, autocomplete: "off", class: 'input', required: true %>
@@ -63,6 +78,8 @@
       ================================================-->     
         
 
+=======
+>>>>>>> origin/Jordan_Dev
     <!--<div class="field">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true %>
@@ -82,12 +99,19 @@
     </div>-->
 
     <div class = "btn-2">
+<<<<<<< HEAD
       <center><%= f.submit "Sign up", class: 'butn' %>
+=======
+      <center><%= f.submit "Sign up", class: 'btn' %>
+>>>>>>> origin/Jordan_Dev
     </div>
 <% end %>
 
   <center><%= render "devise/shared/links" %>
 
 </div>
+<<<<<<< HEAD
 </div>
+=======
+>>>>>>> origin/Jordan_Dev
 

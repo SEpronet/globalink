@@ -1,5 +1,15 @@
 config/database.yml
 
+<<<<<<< HEAD
 /log
 
 /tmp
+=======
+#ignore everything in tmp except .keep
+/tmp/
+!/tmp/.keep
+
+#ignoring logs
+/log/
+!/log/.keep
+>>>>>>> origin/Jordan_Dev

@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20161019030533) do
+=======
+ActiveRecord::Schema.define(version: 20160916084653) do
+>>>>>>> origin/Jordan_Dev
 
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.text     "content",    limit: 65535
@@ -35,10 +39,13 @@ ActiveRecord::Schema.define(version: 20161019030533) do
     t.datetime "updated_at",                          null: false
     t.string   "firstname"
     t.string   "lastname"
+<<<<<<< HEAD
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+=======
+>>>>>>> origin/Jordan_Dev
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
