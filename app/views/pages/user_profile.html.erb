@@ -12,11 +12,19 @@
                 </div>
                 <div class="card-info"> 
     	    <span class="card-title"><%= current_user.firstname %> <%= current_user.lastname %></span></br>
-    	    <%if false%>
+    	    <body>
+                <%= form_for() do |f| %>
+              <div class = "editProfile">
+              
+              <center><%= f.submit "Edit Profile", class: 'butn' %>
+              </div>
+             
+            <%if false%>
                 <span class="card-title">Title: <%= current_user.title %></span></br>
     	       <span class="card-title">Education: <%= current_user.education %></span></br>
-            <%end%>
+            <% end %>
                 </div>  
+
         </div>
     </div>
 

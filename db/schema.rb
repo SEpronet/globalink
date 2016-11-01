@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20161019030533) do
 
-  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.text     "content",    limit: 65535
     t.integer  "user_id"
     t.datetime "created_at",               null: false
@@ -20,15 +20,7 @@ ActiveRecord::Schema.define(version: 20161019030533) do
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
-  create_table "skills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "skill"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_skills_on_user_id", using: :btree
-  end
-
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -43,8 +35,6 @@ ActiveRecord::Schema.define(version: 20161019030533) do
     t.datetime "updated_at",                          null: false
     t.string   "firstname"
     t.string   "lastname"
-    t.string   "title"
-    t.string   "education"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
@@ -54,5 +44,4 @@ ActiveRecord::Schema.define(version: 20161019030533) do
   end
 
   add_foreign_key "posts", "users"
-  add_foreign_key "skills", "users"
 end
