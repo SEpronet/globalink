@@ -1,0 +1,23 @@
+<body>
+    <div class= "card-box">
+        <div class="card hovercard">
+            <div class="card-background">
+                <img class="card-bkimg"><%= image_tag("default.jpeg", :alt => "Globalink") %>
+                <!-- http://lorempixel.com/850/280/people/9/ -->
+            </div>
+             
+                <div class="useravatar">
+                    <%= image_tag("default.jpeg", :alt => "Globalink") %>
+                </div>
+                <div class="card-info"> 
+    	    <span class="card-title"><%= @user.firstname %> <%= @user.lastname %></span></br>
+    	    <span class="card-title">Title: <%= @user.title %></span></br>
+    	    <span class="card-title">Education: <%= @user.education %></span></br>
+                
+            <%= link_to "Add Friend", friendships_path(:friend_id => @user.id), :method => :post %>
+                
+            </div>  
+        </div>
+    </div>
+
+</body>
