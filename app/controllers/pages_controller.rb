@@ -9,4 +9,8 @@ class PagesController < ApplicationController
   	@post = Post.new
   	@posts = Post.all
   end
+
+  def user_profile
+  	@friendships = Friendship.all
+  end
 end

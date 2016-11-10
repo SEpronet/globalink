@@ -17,6 +17,22 @@
                 <span class="card-title">Title: <%= current_user.title %></span></br>
     	       <span class="card-title">Education: <%= current_user.education %></span></br>
             <%end%>
+                            <h2>Friends</h2>
+                    <ul>
+                      <% for friendship in current_user.friendships %>
+                        <li>
+                          <%=h friendship.friend.firstname %>
+                          (<%= link_to "remove", friendship, :method => :delete %>)
+                        </li>
+                      <% end %>
+                    </ul>
+                    
+                    <h2>Friended by Users</h2>
+                    <ul>
+                      <% for user in current_user.inverse_friends %>
+                        <li><%=h user.firstname %></li>
+                      <% end %>
+                    </ul>
                 </div>  
         </div>
 <div class = "info-summary">
