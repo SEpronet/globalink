@@ -1,4 +1,4 @@
-
+<body class = "form-bg">
 <h1 class="elegantshadow">Sign Up</h1>
 
 <div class="relative">
@@ -40,6 +40,7 @@
       <%= f.label :password_confirmation %>     
     </div>
 
+    <%if false%>
     <div class="group">
       <%= f.text_field :title, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
@@ -53,7 +54,7 @@
       <span class="bar"></span>
       <%= f.label :education %>     
     </div>
-
+    <%end%>
     
       <!-- ===============Profile photo============== 
       <%= f.file_field :avatar, autocomplete: "off", required: true %>
@@ -87,5 +88,6 @@
 
   <center><%= render "devise/shared/links" %>
 
+</div>
 </div>
 

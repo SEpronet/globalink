@@ -15,6 +15,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 #searchButton {
   display: inline-block;
   margin: 0 10px;
@@ -49,10 +50,24 @@ section.border #searchButton.active {
 }
 
 nav {
-  float: center;
   display: inline-block;
-  margin-bottom: 10px;
+  float: center;
   margin-left: 10px;
+}
+
+nav.navbar{
+  background: #E5E5E5;
+  opacity: 0.7;
+  display: inline-block;
+  border-bottom: 4px double black;
+  margin-right: 10px;
+  margin-bottom: 10px !important;
+}
+
+.navbar{
+-moz-box-shadow: 0 0 5px #888;
+-webkit-box-shadow: 0 0 5px#888;
+box-shadow: 0 0 5px #888;
 }
 
 .border{
@@ -61,5 +76,36 @@ nav {
   margin-top: 5px;
 }
 
+a.nav-link{
+  font-size: 24px;
+  color: #003A65;
+  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
+  font-weight: bold;
+}
 
+nav.navbar:hover  a.nav-link{
+  filter: blur(1px);
+}
 
+nav.navbar a.nav-link:hover {
+  filter: blur(0);
+}
+
+body{
+  padding-top: 65px !important;
+}
+
+/*flash*/
+.alert{
+  position: relative;
+  text-align: center;
+  color: #E50D13;
+  font-size: 14px;
+  padding: 5px;
+  height: 30px;
+  width: 200px;
+  left: 42%;
+  margin-top: 30px;
+  }
+
+/*****/

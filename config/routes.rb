@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
+  resources :posts
   devise_for :users
 
   root 'pages#home'
 
   get 'pages/about'
   get 'pages/user_profile'
+  get 'pages/newsfeed'
 
-  get '/user_profile' => "pages#user_profile", as: :user_root
+  get '/newsfeed' => "pages#newsfeed", as: :user_root
+  get '/user_profile' => "pages#user_profile"
+  get '/about' => "pages#about"
+  get '/index' => "pages#index"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
