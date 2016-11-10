@@ -387,7 +387,7 @@ button.btn:active{
 }
 
 .post-unit .post-content{
-	font-size: 14px;
+	font-size: 16px;
 	margin: 15px 0;
 	height: 75px;
 	width: 530px;
@@ -395,7 +395,24 @@ button.btn:active{
 	border-radius: 1px;
 	padding: 4px;
 	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.7), 
-				inset 0 2px 0 -1px rgba(98, 98, 98, 0.5), 0 1px 2px -1px rgba(0, 0, 0, 0.7);
+				inset 0 2px 0 -1px rgba(90, 90, 90, 0.5), 0 1px 2px -1px rgba(0, 0, 0, 0.7);
+}
+tr, td{
+	border: 5px solid black;
+	font-size: 16px;
+	padding: 25px;
+	border-spacing: 25px;
+	text-align: center;
+	font-family: "Arial", sans-serif;
+
+}
+table, th{
+	border: 2px solid black;
+	border-spacing: 25px;
+	text-align: center;
+	font-family: "Arial", sans-serif;
+	font-size: 24px;
+
 }
 
 /**************************************************************************/

@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161019030533) do
+ActiveRecord::Schema.define(version: 20161027221036) do
+
+  create_table "contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "law_id"
+    t.integer  "parent_id"
+    t.string   "titel"
+    t.string   "text"
+    t.string   "content"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "content",    limit: 65535
@@ -18,14 +29,6 @@ ActiveRecord::Schema.define(version: 20161019030533) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
-  end
-
-  create_table "skills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "skill"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_skills_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -43,8 +46,6 @@ ActiveRecord::Schema.define(version: 20161019030533) do
     t.datetime "updated_at",                          null: false
     t.string   "firstname"
     t.string   "lastname"
-    t.string   "title"
-    t.string   "education"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
@@ -54,5 +55,4 @@ ActiveRecord::Schema.define(version: 20161019030533) do
   end
 
   add_foreign_key "posts", "users"
-  add_foreign_key "skills", "users"
 end
