@@ -9,7 +9,6 @@
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
-
     <body>
 
     <%unless @disable_nav %>  
@@ -20,11 +19,11 @@
         <div class="nav-wrapper">
           <a href="user_profile" class="brand-logo"><%= image_tag("gl100.png", :alt => "GlobalinkIcon", :size => '55x55') %></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><%= link_to 'Profile', currentprofile_url %></li>
-            <li><%= link_to 'Newsfeed', newsfeed_url %></li>
-            <%= link_to "Mailbox", conversations_path, class: "item" %>
-            <li><%= link_to 'My Connect', connections_url %></li>
-            <li><%= link_to 'About', aboutus_url %></li>
+            <li><a href="user_profile">Profile</a></li>
+            <li><a href="newsfeed">NewsFeed</a></li>
+            <li><%= link_to "Mailbox", conversations_path, class: "item" %></li>
+            <li><a href="#">MyConnect</a></li>
+            <li><a href="about">About</a></li>
             <li><a>
               <%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %>
             </a></li>   
@@ -52,8 +51,12 @@
 
       <% end %>
       
+<<<<<<< HEAD
     <% end %>  
 
+=======
+    <% end %>
+>>>>>>> Messaging Added
     <%= yield %>
     </body>
 
