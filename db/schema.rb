@@ -95,6 +95,23 @@ ActiveRecord::Schema.define(version: 20161129073945) do
     t.integer  "friend_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
+  create_table "conversations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "body",            limit: 65535
+    t.integer  "conversation_id"
+    t.integer  "user_id"
+    t.boolean  "read",                          default: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id", using: :btree
+    t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
   end
 
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -105,6 +122,7 @@ ActiveRecord::Schema.define(version: 20161129073945) do
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
+<<<<<<< HEAD
   create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "bio",        limit: 65535
     t.text     "interests",  limit: 65535
@@ -127,7 +145,6 @@ ActiveRecord::Schema.define(version: 20161129073945) do
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_skills_on_user_id", using: :btree
   end
-
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -170,6 +187,7 @@ ActiveRecord::Schema.define(version: 20161129073945) do
   add_foreign_key "educations", "users"
   add_foreign_key "experiences", "users"
   add_foreign_key "posts", "users"
+
   add_foreign_key "profiles", "users"
   add_foreign_key "skills", "users"
 end

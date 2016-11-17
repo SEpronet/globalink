@@ -22,6 +22,7 @@
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><%= link_to 'Profile', currentprofile_url %></li>
             <li><%= link_to 'Newsfeed', newsfeed_url %></li>
+            <%= link_to "Mailbox", conversations_path, class: "item" %>
             <li><%= link_to 'My Connect', connections_url %></li>
             <li><%= link_to 'About', aboutus_url %></li>
             <li><a>
@@ -52,6 +53,7 @@
       <% end %>
       
     <% end %>  
+
     <%= yield %>
     </body>
 
