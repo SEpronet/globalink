@@ -308,4 +308,22 @@ body{
 				inset 0 2px 0 -1px rgba(98, 98, 98, 0.5), 0 1px 2px -1px rgba(0, 0, 0, 0.7);
 }
 
+tr, td{
+	border: 2px solid black;
+	font-size: 16px;
+	padding: 25px;
+	border-spacing: 25px;
+	text-align: center;
+	font-family: "Arial", sans-serif;
+
+}
+table, th{
+	border: 2px solid black;
+	border-spacing: 25px;
+	text-align: center;
+	font-family: "Arial", sans-serif;
+	font-size: 24px;
+
+}
+
 /**************************************************************************/
