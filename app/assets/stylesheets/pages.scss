@@ -152,106 +152,7 @@ body{
 //Profile
 
 /******************************************* USER PROFILE PAGE *****************************/
-.card-box{
-	position: absolute;
-	margin-top: 0;
-	margin-bottom: 15px;
-    margin-right: 10px !important;
-    width: 100%;
-    text-align: center;
-}
 
- .card {
-    margin-top: 20px;
-    padding: 30px;
-    background-color: rgba(214, 224, 226, 0.2);
-    -webkit-border-top-left-radius:5px;
-    -moz-border-top-left-radius:5px;
-    border-top-left-radius:5px;
-    -webkit-border-top-right-radius:5px;
-    -moz-border-top-right-radius:5px;
-    border-top-right-radius:5px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border-bottom: solid #001f4d;
-}
-.card.hovercard {
-    position: relative;
-    padding-top: 0;
-    overflow: hidden;
-    text-align: center;
-    background-color: #fff;
-    background-color: rgba(255, 255, 255, 1);
-}
-.card.hovercard .card-background {
-    height: 240px;
-}
-.card-background img {
-    -webkit-filter: blur(25px);
-    -moz-filter: blur(25px);
-    -o-filter: blur(25px);
-    -ms-filter: blur(25px);
-    filter: blur(25px);
-    margin-left: -100px;
-    margin-top: -200px;
-    min-width: 130%;
-}
-.card.hovercard .useravatar {
-    position: absolute;
-    top: 15px;
-    margin-left: 45%;
-}
-.card.hovercard .useravatar img {
-    width: 100px;
-    height: 100px;
-    max-width: 100px;
-    max-height: 100px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    margin-top: 50px;
-    border: 5px solid #4d94ff;
-}
-.card.hovercard .card-info {
-    position: absolute;
-    bottom: 14px;
-    left: 0;
-    right: 0;
-}
-.card.hovercard .card-info .card-title {
-    padding:0 5px;
-    font-size: 20px;
-    line-height: 1;
-    color: #262626;
-    background-color: rgba(255, 255, 255, 0.1);
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    margin: 5px 0;
-}
-.card.hovercard .card-info {
-    overflow: hidden;
-    text-align: center;
-    font-size: 12px;
-    line-height: 20px;
-    color: #737373;
-    text-overflow: ellipsis;
-}
-.card.hovercard .bottom {
-    padding: 0 20px;
-    margin-bottom: 17px;
-}
-.btn-pref .btn {
-    -webkit-border-radius:0 !important;
-}
-
-button.btn:active{
-}
-
-.align-image{
-	margin-left: 0px;
-}
 
 /*******POSTS*********************************************************************/
 
@@ -314,6 +215,7 @@ button.btn:active{
 	display: block;
 	position: relative;
 	width: 900px;
+	min-height: 300px;
 	margin-top: 50px;
 	padding: 5px;
 	border-radius: 4px;
@@ -384,6 +286,14 @@ button.btn:active{
 	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 	font-weight: bold;
 	font-size: 18px;
+}
+
+.post-unit .dateNtime{
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-style: italic;
+	font-color: #8095C2;
+	font-size: 12px;
+	margin-bottom: -7px;
 }
 
 .post-unit .post-content{

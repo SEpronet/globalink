@@ -23,9 +23,12 @@
     <% @posts.each do |post| %>
         <div class = "post-unit">
             <div class = "name"><%= post.user.firstname %> <%= post.user.lastname %> </br></div>
+            <div class = "dateNtime"><%= time_ago_in_words(post.created_at) %> ago</div>
             <div class = "post-content"><%= post.content %></br></div>
-            <div class = "destroy"><%= link_to image_tag("destroy.png", :alt => "Delete", :size => '16x16'), 
-                post, method: :delete, data: { confirm: 'Are you sure?' } %></br></div>
+            <%if current_user == post.user%>
+              <div class = "destroy"><%= link_to image_tag("destroy.png", :alt => "Delete", :size => '16x16'), 
+                  post, method: :delete, data: { confirm: 'Are you sure?' } %></br></div>
+            <%end%>
         </div>
     <% end %>
   </div>

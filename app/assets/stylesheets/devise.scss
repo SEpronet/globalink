@@ -90,7 +90,8 @@ border: 0px solid #595959;
 box-shadow: 0 0 8px #595959; }
 
 /* LABEL ======================================= */
-label{
+
+.labe{
 
   color:#999; 
   font-size:18px;
@@ -105,7 +106,7 @@ label{
 }
 
 /* active state */
-input:focus ~ label, input:valid ~ label 		{
+input:focus ~ .labe, input:valid ~ .labe 		{
   top:-20px;
   font-size:14px;
   color:#5264AE;

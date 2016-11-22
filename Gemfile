@@ -1,4 +1,6 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
+
+gem 'font-awesome-sass'
 
 gem "paperclip", "~> 5.0.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

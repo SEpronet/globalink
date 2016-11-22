@@ -9,35 +9,35 @@
       <%= f.text_field :firstname, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :firstname %>     
+      <%= f.label :firstname, class: 'labe' %>     
     </div>
 
        <div class="group">
       <%= f.text_field :lastname, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :lastname %>     
+      <%= f.label :lastname, class: 'labe' %>     
     </div>
 
     <div class="group">
       <%= f.email_field :email, class: 'input', required: true%>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :email %>
+      <%= f.label :email, class: 'labe' %>
     </div>
    
     <div class="group">
       <%= f.password_field :password, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :password %>     
+      <%= f.label :password, class: 'labe' %>     
     </div>
 
     <div class="group">
       <%= f.password_field :password_confirmation, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :password_confirmation %>     
+      <%= f.label :password_confirmation, class: 'labe' %>     
     </div>
 
     <%if false%>
@@ -45,22 +45,22 @@
       <%= f.text_field :title, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :title %>     
+      <%= f.label :title, class: 'labe' %>     
     </div>
 
     <div class="group">
       <%= f.text_field :education, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :education %>     
+      <%= f.label :education, class: 'labe' %>     
     </div>
     <%end%>
     
-      <!-- ===============Profile photo============== 
+      
       <%= f.file_field :avatar, autocomplete: "off", required: true %>
       <span class="bar"></span>
       <%= f.label :avatar %>
-      ================================================-->     
+          
         
 
     <!--<div class="field">

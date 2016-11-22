@@ -1,0 +1,11 @@
+<div class = "new_profile">
+<div class = "heading">Getting Started</div>
+
+<%= render 'form', profile: @profile %>
+
+<!--<%= link_to ' Back to Profile', {controller: "pages", action: "user_profile"}, class: 'profile_back' %>-->
+<div class = "profile_back">
+	<%= link_to ' Back to Profile', {controller: "pages", action: "user_profile", class: 'back_link'} %>
+</div>
+	
+</div>

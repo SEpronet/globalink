@@ -29,9 +29,9 @@ class PostsController < ApplicationController
     post.user = current_user
   end
   if @post.save
-    redirect_to root_path
+    redirect_to :controller => 'pages', :action => 'newsfeed' 
   else
-    redirect_to root_path, notice: @post.errors.full_messages.first
+    redirect_to :controller => 'pages', :action => 'newsfeed', notice: @post.errors.full_messages.first
   end
 end
 =begin
@@ -68,7 +68,7 @@ end
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to :controller => 'pages', :action => 'newsfeed', notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

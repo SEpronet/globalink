@@ -1,23 +1,27 @@
-<body>
-    <div class= "card-box">
-        <div class="card hovercard">
-            <div class="card-background">
-                <img class="card-bkimg"><%= image_tag("default.jpeg", :alt => "Globalink") %>
-                <!-- http://lorempixel.com/850/280/people/9/ -->
-            </div>
-             
-                <div class="useravatar">
-                    <%= image_tag("default.jpeg", :alt => "Globalink") %>
-                </div>
-                <div class="card-info"> 
-    	    <span class="card-title"><%= @user.firstname %> <%= @user.lastname %></span></br>
-    	    <span class="card-title">Title: <%= @user.title %></span></br>
-    	    <span class="card-title">Education: <%= @user.education %></span></br>
-                
-            <%= link_to "Add Friend", friendships_path(:friend_id => @user.id), :method => :post %>
-                
-            </div>  
-        </div>
-    </div>
+<div class = "user">
+	<div class = "user_basic">
+		<%= image_tag(@user.avatar.url, size: "200x200", :alt => "default profile photo", class: 'photo') %>
+		<div class = "name">
+			<%= @user.firstname %> <%= @user.lastname %></br>
+			<div id = "title"><%= @user.title %></div>
+		</div>
+			<%= link_to "Add", friendships_path(:friend_id => @user.id), :method => :post, class: 'add_friend fa fa-plus' %>
+        	
+        	<a href = "#" class = "message fa fa-envelope"></a>
+	</div>
+ 	<%if @show_exists %>
+  <div class = "profile_info">  
+    <div class = "title">Bio</div>
+    <div class = "content"><%= @profile.bio %></div>
+  </div>
+  <div class = "profile_info">
+    <div class = "title">Interests</div>
+    <div class = "content"><%= @profile.interests %></div>
+  </div>
+</div>              
 
-</body>
+<% else %>
+<div class = "new_profile">
+  <center><div id = "no_show">Nothing to show here.</div>
+</div>
+<% end %>

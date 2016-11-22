@@ -1,3 +1,239 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user {
+	margin: 5px auto;
+}
+
+.user .user_basic{
+	display: block;
+	position: relative;
+	height: 200px;
+	width: 100%;
+	background: #387A8F;
+
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
+
+.user_basic .name{
+	display: block;
+	position: absolute;
+	font-family: "Simplifica";
+	font-size: 80px;
+	color: #193441;
+	left: 400px;
+	top: 50px;
+}
+
+.name #title{
+	display: block;
+	position: relative;
+	bottom: 20px;
+	letter-spacing: 3px;
+	font-size: 35px;
+	color: #499FBA;
+}
+
+.user_basic .photo{
+	display: block;
+	position: absolute;
+	left: 60px;
+	margin-top: 4%;
+	height: 300px;
+	width: 300px;
+	border-radius: 3px;
+
+	-webkit-box-shadow: 0 5px 7px -2px rgba(50, 50, 50, 0.5);
+       -moz-box-shadow: 0 5px 7px -2px rgba(50, 50, 50, 0.5);
+            box-shadow: 0 5px 7px -2px rgba(50, 50, 50, 0.5);
+}
+
+/*************UNSIGNED USER**********/
+.user_basic .add_friend{
+	height: 35px;
+	width: 75px;
+	padding: 9px 10px;
+	border-radius: 5px;
+	background-color: #3E606F;
+	display: block;
+	position: absolute;
+	left: 85%;
+	top: 160px;
+	font-size: 20px;
+	color: #D4D8DB;
+	text-decoration: none !important;
+
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
+
+.add_friend:hover{
+	background-color: #2E4752;
+	-webkit-animation-timing-function: ease-in;
+}
+
+.user_basic .message{
+	height: 35px;
+	width: 45px;
+	padding: 4px 9px;
+	border-radius: 5px;
+	background-color: #51A651;
+	display: block;
+	position: absolute;
+	left: 81%;
+	top: 160px;
+	font-size: 25px;
+	color: #D4D8DB;
+	text-decoration: none !important;
+
+	-moz-box-shadow: 0 0 2px #888;
+	-webkit-box-shadow: 0 0 2px#888;
+	box-shadow: 0 0 2px #888;
+}
+
+.message:hover{
+	background-color: #3A7E4D;
+	-webkit-animation-timing-function: ease-in;
+}
+
+/***********************************/
+
+.user .new_profile{
+	display: block;
+	height: 150px;
+	width: 500px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.new_profile #no_show{
+	font-size: 15px;
+	color: #9B9E9D;
+	margin-top: 20px;
+}
+
+.new_profile .add_info{
+	text-decoration: none !important;
+	font-family: "Simplifica";
+	font-style: bold;
+	font-size: 60px;
+	letter-spacing: 6px;
+	margin-top: 10px;
+	color: #3DC39E;
+}
+
+.new_profile .fa-pencil{
+	font-size: 30px;
+	color: #3DC39E;
+}
+
+.user .profile_info{
+	display: block;
+	min-height: 140px;
+	width: 600px;
+	word-wrap: break-word;
+	margin: auto;
+	margin-left: 420px;
+}
+
+.profile_info .title{
+	display: block;
+	position: relative;
+	height: 37px;
+	width: 100px;
+	padding-top: 7px;
+	margin-left: 15px;
+	margin-top: 20px;
+	text-align: right;
+	font-family: "tahoma";
+	font-weight: bold;
+	font-size: 18px;
+	color: #1D3D4C;
+	border-bottom: solid 1px;
+	border-bottom-color: #73A1B2;
+	-webkit-box-shadow: 0 3px 3px -2px rgba(50, 50, 50, 0.5);
+       -moz-box-shadow: 0 3px 3px -2px rgba(50, 50, 50, 0.5);
+            box-shadow: 0 3px 3px -2px rgba(50, 50, 50, 0.5);
+}
+
+.profile_info .content{
+	display: inline-block;
+	position: relative;
+	margin-top: 10px;
+	left: 130px;
+	bottom: 40px;
+	min-height: 120px;
+	width: 400px;
+	word-wrap: break-word;
+	font-family: "tahoma";
+	font-weight: normal;
+	font-size: 15px;
+	color: #1D3D4C;
+}
+
+.user .profile_menu{
+	display: block;
+	position: absolute;
+	height: 200px;
+	width: 300px;
+	left: 60px;
+	top: 450px;
+}
+
+.profile_menu .menu_item{
+	display: block;
+	padding-top: 15px;
+	padding-left: 15px; 
+	height: 50px;
+	position: relative;
+	font-size: 22px;
+	font-weight: bold;
+	font-family: "century gothic";
+	color: #1D3D4C;
+	border-bottom: solid 1px;
+	border-color: #73A1B2;
+	-webkit-box-shadow: 0 3px 3px -2px rgba(50, 50, 50, 0.5);
+       -moz-box-shadow: 0 3px 3px -2px rgba(50, 50, 50, 0.5);
+            box-shadow: 0 3px 3px -2px rgba(50, 50, 50, 0.5)3
+}
+
+.menu_item .item-left-margin{	
+	text-decoration: none !important;
+	font-size: 22px;
+	font-weight: bold;
+	font-family: "century gothic";
+	color: #1D3D4C;
+}
+
+.menu_item .fa-address-card-o{
+	margin-right: 10px;
+	font-size: 18px;
+} 
+
+.menu_item .fa-graduation-cap{
+	margin-right: 10px;
+	font-size: 18px;
+} 
+
+.menu_item .fa-code{
+	margin-right: 10px;
+	font-size: 18px;
+}
+
+.menu_item .fa-briefcase{
+	margin-right: 10px;
+	font-size: 18px;
+}
+
+.menu_item .active{
+	color: #3DC39E;
+}
+
+.menu_item .fa-arrow-circle-right{
+	margin-left: 90px;
+	font-size: 18px;
+}
