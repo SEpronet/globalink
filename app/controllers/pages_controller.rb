@@ -8,5 +8,7 @@ class PagesController < ApplicationController
   def newsfeed
   	@post = Post.new
   	@posts = Post.all
+
   end
+
 end

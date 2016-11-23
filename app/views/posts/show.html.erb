@@ -10,5 +10,7 @@
   <%= @post.user %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= commontator_thread(@post) %>
+
+<%= link_to 'Edit', edit_post_path %> |
 <%= link_to 'Back', posts_path %>

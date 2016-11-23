@@ -305,7 +305,7 @@ button.btn:active{
 	font-size: 16px;
 	color: white;
 	background: #0584AB;
-	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.7), 
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.7),
 				inset 0 2px 0 -1px rgba(98, 98, 98, 0.5), 0 3px 7px -3px rgba(0, 0, 0, 0.7);
 }
 
@@ -398,8 +398,13 @@ button.btn:active{
 	border: 1px solid;
 	border-radius: 1px;
 	padding: 4px;
-	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.7), 
+	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.7),
 				inset 0 2px 0 -1px rgba(98, 98, 98, 0.5), 0 1px 2px -1px rgba(0, 0, 0, 0.7);
 }
 
+	/* .post-block .comment-link{
+
+	align-self: center;
+	}
+	*/
 /**************************************************************************/
