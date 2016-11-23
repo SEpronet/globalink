@@ -12,18 +12,11 @@
 
 ActiveRecord::Schema.define(version: 20161128004157) do
 
-  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "title",            limit: 50,    default: ""
-    t.text     "comment",          limit: 65535
-    t.string   "commentable_type"
-    t.integer  "commentable_id"
-    t.integer  "user_id"
-    t.string   "role",                           default: "comments"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["commentable_id"], name: "index_comments_on_commentable_id", using: :btree
-    t.index ["commentable_type"], name: "index_comments_on_commentable_type", using: :btree
-    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
+  create_table "conversations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "educations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -58,6 +51,17 @@ ActiveRecord::Schema.define(version: 20161128004157) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.text     "body",            limit: 65535
+    t.integer  "conversation_id"
+    t.integer  "user_id"
+    t.boolean  "read",                          default: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id", using: :btree
+    t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
+  end
+
   create_table "posts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "content",    limit: 65535
     t.integer  "user_id"
@@ -66,6 +70,7 @@ ActiveRecord::Schema.define(version: 20161128004157) do
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
+<<<<<<< HEAD
   create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "bio",        limit: 65535
     t.text     "interests",  limit: 65535
@@ -83,6 +88,8 @@ ActiveRecord::Schema.define(version: 20161128004157) do
     t.index ["user_id"], name: "index_skills_on_user_id", using: :btree
   end
 
+=======
+>>>>>>> e776dca... Add conversations to user model, routes
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -108,6 +115,7 @@ ActiveRecord::Schema.define(version: 20161128004157) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+<<<<<<< HEAD
   create_table "votes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "votable_type"
     t.integer  "votable_id"
@@ -127,4 +135,7 @@ ActiveRecord::Schema.define(version: 20161128004157) do
   add_foreign_key "posts", "users"
   add_foreign_key "profiles", "users"
   add_foreign_key "skills", "users"
+=======
+  add_foreign_key "posts", "users"
+>>>>>>> e776dca... Add conversations to user model, routes
 end
