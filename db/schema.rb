@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20161121004741) do
 
   create_table "commontator_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -58,6 +59,9 @@ ActiveRecord::Schema.define(version: 20161121004741) do
     t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
+=======
+ActiveRecord::Schema.define(version: 20160916084653) do
+>>>>>>> cf87fe732be096e342c017f4fe2bf2b83b3eded1
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
@@ -74,10 +78,13 @@ ActiveRecord::Schema.define(version: 20161121004741) do
     t.datetime "updated_at",                          null: false
     t.string   "firstname"
     t.string   "lastname"
+<<<<<<< HEAD
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+=======
+>>>>>>> cf87fe732be096e342c017f4fe2bf2b83b3eded1
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

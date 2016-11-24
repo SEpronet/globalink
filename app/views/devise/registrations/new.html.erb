@@ -1,3 +1,4 @@
+
 <body class = "form-bg">
 <h1 class="elegantshadow">Sign Up</h1>
 
@@ -9,14 +10,18 @@
       <%= f.text_field :firstname, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :firstname %>     
+
+      <%= f.label :firstname %>
+
     </div>
 
        <div class="group">
       <%= f.text_field :lastname, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :lastname %>     
+
+      <%= f.label :lastname %>
+
     </div>
 
     <div class="group">
@@ -25,43 +30,45 @@
       <span class="bar"></span>
       <%= f.label :email %>
     </div>
-   
+
     <div class="group">
       <%= f.password_field :password, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :password %>     
+      <%= f.label :password %>
     </div>
 
     <div class="group">
       <%= f.password_field :password_confirmation, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :password_confirmation %>     
+      <%= f.label :password_confirmation %>
     </div>
+
 
     <%if false%>
     <div class="group">
       <%= f.text_field :title, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :title %>     
+      <%= f.label :title %>
     </div>
 
     <div class="group">
       <%= f.text_field :education, autocomplete: "off", class: 'input', required: true %>
       <span class="highlight"></span>
       <span class="bar"></span>
-      <%= f.label :education %>     
+      <%= f.label :education %>
     </div>
     <%end%>
-    
-      <!-- ===============Profile photo============== 
+
+      <!-- ===============Profile photo==============
       <%= f.file_field :avatar, autocomplete: "off", required: true %>
       <span class="bar"></span>
       <%= f.label :avatar %>
-      ================================================-->     
-        
+      ================================================-->
+
+
 
     <!--<div class="field">
       <%= f.label :email %><br />
@@ -82,12 +89,11 @@
     </div>-->
 
     <div class = "btn-2">
-      <center><%= f.submit "Sign up", class: 'butn' %>
+
+      <center><%= f.submit "Sign up", class: 'btn' %>
     </div>
 <% end %>
 
   <center><%= render "devise/shared/links" %>
 
 </div>
-</div>
-
