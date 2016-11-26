@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.add-margin{
+	margin: -55px auto !important;
+	margin-bottom: 55px !important;
+}
+
 .user {
 	margin: 5px auto;
 }
@@ -11,7 +16,7 @@
 	position: relative;
 	height: 200px;
 	width: 100%;
-	background: #387A8F;
+	background: #009688;
 
 	-moz-box-shadow: 0 0 5px #888;
 	-webkit-box-shadow: 0 0 5px#888;
@@ -23,7 +28,7 @@
 	position: absolute;
 	font-family: "Simplifica";
 	font-size: 80px;
-	color: #193441;
+	color: #387A8F ;
 	left: 400px;
 	top: 50px;
 }
@@ -34,7 +39,7 @@
 	bottom: 20px;
 	letter-spacing: 3px;
 	font-size: 35px;
-	color: #499FBA;
+	color: #26a69a;
 }
 
 .user_basic .photo{
@@ -123,18 +128,18 @@
 	font-size: 60px;
 	letter-spacing: 6px;
 	margin-top: 10px;
-	color: #3DC39E;
+	color: #ffc107;
 }
 
 .new_profile .fa-pencil{
 	font-size: 30px;
-	color: #3DC39E;
+	color: #ffc107;
 }
 
 .user .profile_info{
 	display: block;
 	min-height: 140px;
-	width: 600px;
+	width: 515px;
 	word-wrap: break-word;
 	margin: auto;
 	margin-left: 420px;
@@ -155,9 +160,6 @@
 	color: #1D3D4C;
 	border-bottom: solid 1px;
 	border-bottom-color: #73A1B2;
-	-webkit-box-shadow: 0 3px 3px -2px rgba(50, 50, 50, 0.5);
-       -moz-box-shadow: 0 3px 3px -2px rgba(50, 50, 50, 0.5);
-            box-shadow: 0 3px 3px -2px rgba(50, 50, 50, 0.5);
 }
 
 .profile_info .content{
@@ -167,12 +169,12 @@
 	left: 130px;
 	bottom: 40px;
 	min-height: 120px;
-	width: 400px;
+	width: 385px;
 	word-wrap: break-word;
 	font-family: "tahoma";
 	font-weight: normal;
 	font-size: 15px;
-	color: #1D3D4C;
+	color: #1D3D4C; 
 }
 
 .user .profile_menu{
@@ -193,7 +195,7 @@
 	font-size: 22px;
 	font-weight: bold;
 	font-family: "century gothic";
-	color: #1D3D4C;
+	color: #ffc107 ;
 	border-bottom: solid 1px;
 	border-color: #73A1B2;
 	-webkit-box-shadow: 0 3px 3px -2px rgba(50, 50, 50, 0.5);
@@ -206,7 +208,7 @@
 	font-size: 22px;
 	font-weight: bold;
 	font-family: "century gothic";
-	color: #1D3D4C;
+	color: #ffc107;
 }
 
 .menu_item .fa-address-card-o{
@@ -230,10 +232,22 @@
 }
 
 .menu_item .active{
-	color: #3DC39E;
+	color: #004d40 ;
 }
 
 .menu_item .fa-arrow-circle-right{
 	margin-left: 90px;
 	font-size: 18px;
+}
+
+.edit_profile .fa-pencil-square-o{
+	font-size: 30px;
+}
+
+.edit_profile{
+	display: block;
+	position: absolute;
+	left: 980px;
+	margin-top: 30px;
+	text-decoration: none;
 }

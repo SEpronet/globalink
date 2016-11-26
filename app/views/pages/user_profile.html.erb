@@ -1,5 +1,5 @@
 <div class = "user">
-	<div class = "user_basic">
+	<div class = "user_basic teal lighten-2">
 		<%= image_tag(current_user.avatar.url, size: "200x200", :alt => "default profile photo", class: 'photo') %>
 		<div class = "name">
 			<%= current_user.firstname %> <%= current_user.lastname %></br>
@@ -24,11 +24,9 @@
         <li><%=h user.firstname %></li>
     <% end %>
 </ul>-->
+<div class = "profile_menu">
 
-<%if @profile_exists %>
-  <div class = "profile_menu">
-
-    <div class = "menu_item">
+    <div class = "menu_item hoverable">
       <i class="fa fa-address-card-o active" aria-hidden="true"></i> 
       <a href = "user_profile" class = "item-left-margin active">
         Overview
@@ -36,21 +34,21 @@
       <i class="fa fa-arrow-circle-right active" aria-hidden="true"></i>
     </div>
 
-    <div class = "menu_item">
+    <div class = "menu_item hoverable">
       <i class="fa fa-graduation-cap" aria-hidden="true"></i> 
       <a href = "#" class = "item-left-margin">
         Education
       </a>
     </div>
 
-    <div class = "menu_item">
+    <div class = "menu_item hoverable">
      <i class="fa fa-code" aria-hidden="true"></i>
-      <a href = "#" class = "item-left-margin">
+      <a href = "user_skills" class = "item-left-margin">
         Skills
       </a>
     </div>
 
-    <div class = "menu_item">
+    <div class = "menu_item hoverable">
      <i class="fa fa-briefcase" aria-hidden="true">
      </i> 
      <a href = "#" class = "item-left-margin">
@@ -59,6 +57,11 @@
     </div>
   </div>
 
+<%if @profile_exists %>
+
+  <div class = "edit_profile">
+      <%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_profile_path(@profile), class: 'btn-floating tooltipped btn-large waves-effect waves-light hoverable' %>
+  </div>
   <div class = "profile_info">  
     <div class = "title">Bio</div>
     <div class = "content"><%= @profile.bio %></div>
@@ -67,12 +70,21 @@
     <div class = "title">Interests</div>
     <div class = "content"><%= @profile.interests %></div>
   </div>
-
+  
 <% else %>
+
 <div class = "new_profile">
   <center><div id = "no_show">Nothing to show here.</div>
   <span class = "fa fa-pencil"></span><%= link_to ' Add Info', new_profile_path, class: 'add_info' %>
 </div>
+
+  <div class = "profile_info">  
+    <div class = "title">Bio</div>
+  </div>
+  <div class = "profile_info">
+    <div class = "title">Interests</div>
+  </div>
+
 <% end %>
 
 </div> 

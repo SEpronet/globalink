@@ -1,5 +1,6 @@
-<div class = "new_profile">
+
 <%= form_for(profile) do |f| %>
+
   <% if profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
@@ -11,22 +12,20 @@
       </ul>
     </div>
   <% end %>
+  <div class = "move-left">
+  <div class="container"> 
 
-  <div class="field">
-    <%= f.label :bio, class: 'label_profile' %>
-    <%= f.text_area :bio, class: 't_area' %>
+      <%= f.label :bio, class: 'label'%>
+      <%= f.text_area :bio, id: "textarea1", class: "materialize-textarea" %>
+
+      <%= f.label :interests, class: 'label'%>
+      <%= f.text_area :interests, id: "textarea2", class: "materialize-textarea" %> 
+
+      <div class="actions">
+        <%= button_tag type: 'submit', class: "waves-effect waves-light btn" do %>
+            <i class="fa fa-check" aria-hidden="true"></i> Save
+        <% end %>
+      </div>
   </div>
-
-  <div class="field">
-    <%= f.label :interests, class: 'label_profile' %>
-    <%= f.text_area :interests, class: 't_area'  %>
   </div>
-
-  <div class="actions">
-    <%= button_tag type: 'submit', class: "profile_save" do %>
-        <i class="fa fa-check" aria-hidden="true"></i> Save
-    <% end %>
-  </div>
-
 <% end %>
-</div>

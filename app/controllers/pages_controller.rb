@@ -18,4 +18,10 @@ class PagesController < ApplicationController
       @profile = Profile.find_by_user_id(current_user.id)
     end
   end
+
+  def skills
+    @skill_exists = false
+    @skills = Skill.all
+    @skill_exists = true
+  end
 end

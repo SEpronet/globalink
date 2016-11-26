@@ -20,6 +20,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+    @disable_nav = true
   end
 
   # POST /profiles

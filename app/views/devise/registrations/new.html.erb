@@ -2,91 +2,57 @@
 <h1 class="elegantshadow">Sign Up</h1>
 
 <div class="relative">
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-     <div class="group">
-      <%= f.text_field :firstname, autocomplete: "off", class: 'input', required: true %>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <%= f.label :firstname, class: 'labe' %>     
-    </div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
        <div class="group">
-      <%= f.text_field :lastname, autocomplete: "off", class: 'input', required: true %>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <%= f.label :lastname, class: 'labe' %>     
-    </div>
+        <%= f.text_field :firstname, autocomplete: "off", class: 'input', required: true %>
+        <%= f.label :firstname, class: 'labe' %>     
+      </div>
 
-    <div class="group">
-      <%= f.email_field :email, class: 'input', required: true%>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <%= f.label :email, class: 'labe' %>
-    </div>
-   
-    <div class="group">
-      <%= f.password_field :password, autocomplete: "off", class: 'input', required: true %>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <%= f.label :password, class: 'labe' %>     
-    </div>
+         <div class="group">
+        <%= f.text_field :lastname, autocomplete: "off", class: 'input', required: true %>
+        <%= f.label :lastname, class: 'labe' %>     
+      </div>
 
-    <div class="group">
-      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'input', required: true %>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <%= f.label :password_confirmation, class: 'labe' %>     
-    </div>
+      <div class="group">
+        <%= f.email_field :email, class: 'input', required: true%>
+        <%= f.label :email, class: 'labe' %>
+      </div>
+     
+      <div class="group">
+        <%= f.password_field :password, autocomplete: "off", class: 'input', required: true %>
+        <%= f.label :password, class: 'labe' %>     
+      </div>
 
-    <%if false%>
-    <div class="group">
-      <%= f.text_field :title, autocomplete: "off", class: 'input', required: true %>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <%= f.label :title, class: 'labe' %>     
-    </div>
+      <div class="group">
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'input', required: true %>
+        <%= f.label :password_confirmation, class: 'labe' %>     
+      </div>
 
-    <div class="group">
-      <%= f.text_field :education, autocomplete: "off", class: 'input', required: true %>
-      <span class="highlight"></span>
-      <span class="bar"></span>
-      <%= f.label :education, class: 'labe' %>     
-    </div>
-    <%end%>
-    
+      <%if false%>
+      <div class="group">
+        <%= f.text_field :title, autocomplete: "off", class: 'input', required: true %>
+        <%= f.label :title, class: 'labe' %>     
+      </div>
+
+      <div class="group">
+        <%= f.text_field :education, autocomplete: "off", class: 'input', required: true %>
+        <%= f.label :education, class: 'labe' %>     
+      </div>
+      <%end%>
       
-      <%= f.file_field :avatar, autocomplete: "off", required: true %>
-      <span class="bar"></span>
-      <%= f.label :avatar %>
-          
         
+        <%= f.file_field :avatar, autocomplete: "off", required: true %>
+        <span class="bar"></span>
+        <%= f.label :avatar %>
 
-    <!--<div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
-    </div>
+      <center><%= button_tag type: 'submit', class: "waves-effect waves-light btn" do %>
+          <i class="material-icons left">power_settings_new</i> Sign Up
+      <% end %>
+  <% end %>
 
-    <div class="field">
-      <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-
-    <div class="field">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>-->
-
-    <div class = "btn-2">
-      <center><%= f.submit "Sign up", class: 'butn' %>
-    </div>
-<% end %>
-
-  <center><%= render "devise/shared/links" %>
+  <div class ="margin-aut-links-login"><%= render "devise/shared/links" %></div>
 
 </div>
 </div>

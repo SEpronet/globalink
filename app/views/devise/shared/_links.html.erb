@@ -1,7 +1,7 @@
 <div class = "shared-link">
 <%- if controller_name != 'sessions' %>
 	Already Have an account?
-  <%= link_to "Log in", new_session_path(resource_name), class: 'btn'  %><br />
+  <%= link_to "Log in", new_session_path(resource_name) %><br />
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>

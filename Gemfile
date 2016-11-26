@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'materialize-sass'
 gem 'font-awesome-sass'
 
 gem "paperclip", "~> 5.0.0"

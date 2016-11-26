@@ -12,88 +12,32 @@
  *
  *= require_tree .
  */
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "materialize/components/color";
+$primary-color: color("teal", "base") !default;
+  $primary-color-light: false !default;
+  $primary-color-dark: false !default;
+  @if not $primary-color-light {
+    $primary-color-light: lighten($primary-color, 15%);
+  }
+  @if not $primary-color-dark {
+    $primary-color-dark: darken($primary-color, 15%);
+  }
+  $secondary-color: color("amber", "base") !default;
+  $success-color: color("green", "base") !default;
+  $error-color: color("red", "base") !default;
 
-#searchButton {
-  display: inline-block;
-  margin: 0 10px;
-  padding: 2px 5px;
-  font-size: 15px;
-  font-family: "Oswald",sans-serif;
-  line-height: 1.8;
-  appearance: none;
-  box-shadow: none;
-  border-radius: 0;
-}
+  $link-color: color("light-blue", "lighten-2") !default;
+@import 'materialize';
 
-#searchButton:focus {
-  outline: none
-}
 
-section.border #searchButton {
-  color: #6496c8;
-  background: rgba(0,0,0,0);
-  border-radius: 8px;
-  border: solid 5px #6496c8;
-}
-section.border #searchButton:hover,
-section.border #searchButton.hover {
-  border-color: #346392;
-  color: #346392;
-}
-section.border #searchButton:active,
-section.border #searchButton.active {
-  border-color: #27496d;
-  color: #27496d;
+a{
+  text-decoration: none;
+  color: #ffc107;
 }
 
-nav {
-  display: inline-block;
-  float: center;
-  margin-left: 10px;
-}
-
-nav.navbar{
-  background-color: rgba(255,255,255,0.5);
-  border-radius: 2px;
-  display: inline-block;
-  margin-right: 10px;
-  margin-bottom: 10px !important;
-}
-
-.navbar{
--moz-box-shadow: 0 0 5px #888;
--webkit-box-shadow: 0 0 5px#888;
-box-shadow: 0 0 5px #888;
-}
-
-.border{
-  float: right;
-  margin-right: 10px;
-  margin-top: 5px;
-}
-
-a.nav-link{
-  font-size: 24px;
-  color: #003A65;
-  font-family: "Century Gothic",CenturyGothic,AppleGothic,sans-serif;
-  font-weight: bold;
-}
-
-nav.navbar:hover  a.nav-link{
-  filter: blur(1px);
-}
-
-nav.navbar a.nav-link:hover {
-  filter: blur(0);
-}
-
-body{
-  padding-top: 65px !important;
-}
 
 /*flash*/
 .alert{

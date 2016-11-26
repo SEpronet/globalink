@@ -7,13 +7,14 @@
 			</div>
 		</div>
 	</div>
-</div> 
+</div>
 
 <div class = "new_profile">
-	<div class = "heading">Edit Overview</div>
+	<div class = "heading">New Skill</div>
 
-	<%= render 'form', profile: @profile %> 
+	<%= render 'form', skill: @skill %>
+
 	<div class = "profile_back">
-		<%= link_to 'Cancel', {controller: "pages", action: "user_profile", class: 'back_link waves-light'} %>
+		<%= link_to 'Cancel', {controller: "pages", action: "user_skills", class: 'back_link'} %>
 	</div>
 </div>

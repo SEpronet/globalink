@@ -1,0 +1,64 @@
+<div class = "user">
+	<div class = "user_basic teal lighten-2">
+		<%= image_tag(current_user.avatar.url, size: "200x200", :alt => "default profile photo", class: 'photo') %>
+		<div class = "name">
+			<%= current_user.firstname %> <%= current_user.lastname %></br>
+			<div id = "title"><%= current_user.title %></div>
+		</div>
+	</div>
+                
+<div class = "profile_menu">
+
+    <div class = "menu_item hoverable">
+      <i class="fa fa-address-card-o" aria-hidden="true"></i> 
+      <a href = "user_profile" class = "item-left-margin">
+        Overview
+      </a>
+    </div>
+
+    <div class = "menu_item hoverable">
+      <i class="fa fa-graduation-cap" aria-hidden="true"></i> 
+      <a href = "#" class = "item-left-margin">
+        Education
+      </a>
+    </div>
+
+    <div class = "menu_item hoverable">
+     <i class="fa fa-code active" aria-hidden="true"></i>
+      <a href = "user_skills" class = "item-left-margin active">
+        Skills
+      </a>
+      <i class="fa fa-arrow-circle-right active" aria-hidden="true"></i>
+    </div>
+
+    <div class = "menu_item hoverable">
+     <i class="fa fa-briefcase" aria-hidden="true">
+     </i> 
+     <a href = "#" class = "item-left-margin">
+      Experiences
+     </a>
+    </div>
+  </div>
+
+<%if false %>
+
+  <% @skills.each do |skill_var| %>
+    <div class = "profile_info">  
+      <div class = "title">Skill</div>
+      <div class = "content"><%= skill_var.skill %></div>
+      <div class = "edit_profile">
+          <%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_skill_path(skill_var), class: 'btn-floating tooltipped btn-large waves-effect waves-light hoverable' %>
+      </div>
+    </div>
+  <% end %>
+  
+<% else %>
+
+<div class = "new_profile">
+  <center><div id = "no_show">Add a skill</p></div><br>
+  <%= link_to '<i class="material-icons">add</i>'.html_safe, new_skill_path, class: 'btn-floating tooltipped btn-large waves-effect waves-light hoverable' %>
+</div>
+
+<% end %>
+
+</div> 

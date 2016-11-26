@@ -1,65 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Pronet</title>
-    <%= csrf_meta_tags %>
+    <head>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <title>Globalink</title>
+      <%= csrf_meta_tags %>
 
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
 
-  <body>
-  <%unless @disable_nav %>  
-    <% if user_signed_in? %>
-    <nav class="navbar navbar-fixed-top navbar-light bg-faded">
-      <a class="navbar-brand" href="user_profile"><%= image_tag("gl50.png", :alt => "GlobalinkIcon", :size => '30x30') %></a>
-      <ul class="nav navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="user_profile">Profile <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="newsfeed">NewsFeed</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">MyConnect</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about">About</a>
-        </li>
-        <li class="nav-item">
-          <%= link_to('Sign Out', destroy_user_session_path, :method => :delete, class: 'nav-link') %>
-        </li>
-      </ul>
-      <form class="form-inline pull-xs-right">
-        <section class="border">
-          <input class="form-control" type="text" placeholder="Search">
-          <button id="searchButton">Search</button>
-        </section>
-      </form>
-    </nav>
-    <% else %>
-      <nav class="navbar navbar-fixed-top navbar-light bg-faded">
-      <a class="navbar-brand" href="http://localhost:3000/"><%= image_tag("gl50.png", :alt => "GlobalinkIcon", :size => '30x30') %></a>
-      <ul class="nav navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="/users/sign_in">Log In<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/users/sign_up">Sign Up</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about">About</a>
-        </li>
-    </nav>
-  <% end %>
-    
+    <body>
+
+    <%unless @disable_nav %>  
+
+      <% if user_signed_in? %>
+
+      <nav>
+        <div class="nav-wrapper">
+          <a href="user_profile" class="brand-logo"><%= image_tag("gl100.png", :alt => "GlobalinkIcon", :size => '55x55') %></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="user_profile">Profile</a></li>
+            <li><a href="newsfeed">NewsFeed</a></li>
+            <li><a href="#">MyConnect</a></li>
+            <li><a href="about">About</a></li>
+            <li><a>
+              <%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %>
+            </a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <% else %>
+
+       <nav>
+        <div class="nav-wrapper">
+          <a href="user_profile" class="brand-logo"><%= image_tag("gl100.png", :alt => "GlobalinkIcon", :size => '55x55') %></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/users/sign_in">Log In</a></li>
+            <li><a href="/users/sign_up">Sign Up</a></li>
+            <li><a href="collapsible.html">About</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <% end %>
+      
     <% end %>  
-      <%= yield %>
+    <%= yield %>
     </body>
 
-    <% unless alert == " " %>
-      <div class="alert"><%= alert %></div>
-    <% end %>
+  <% unless alert == " " %>
+    <div class="alert"><%= alert %></div>
+  <% end %>
 
 </html>

@@ -1,29 +1,9 @@
 
 <body class="bg">
-<!--<% if user_signed_in? %>
-  <li>
-  <h1><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></h1>       
-  </li>
-<% else %>
-  <li>
-  <%= link_to('Login', new_user_session_path)  %>  
-  </li>
-<% end %>
-
-
-<% if user_signed_in? %>
-  <li>
-  <%= link_to('Edit registration', edit_user_registration_path) %>
-  </li>
-<% else %>
-  <li>
-  <%= link_to('Register', new_user_registration_path)  %>
-  </li>
-<% end %>-->
 
 <div class="circle">
   <!--<h1 class="pronet-name">Globalink</h1>-->
-  <div class="bg-image"><%= image_tag("globalink.png", :alt => "Globalink") %></div>
+  <div class="bg-image"><%= image_tag("globalink.png", :alt => "Globalink", :size => '350x203') %></div>
   <div class="circle-content">
     <% if user_signed_in? %>
       <h3 id="rl"><%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %></h3>
@@ -34,11 +14,15 @@
   </div>
 </div>
 
-<h1 class="desc-box">
-	<div class="icon"><%= image_tag("browser.png", :alt => "Browser") %></div>
-	<div class="icon"><%= image_tag("envelope.png", :alt => "Envelope") %></div>
-	<div class="icon"><%= image_tag("hierarchical-structure.png", :alt => "Browser") %></div>
-	<div class="icon"><%= image_tag("photo-camera.png", :alt => "Browser") %></div>
-	<div class="text">ProNet is for working or perspective working people to create a profile and connect with other professionals. Forums of special interest can be created for professionals to join discussions, share experiences, make announcements, etc., on particular areas or subjects. Professionals use this service to further their careers and recruiters can subscribe and use it as their “talent pool.”</div>
-</h1>
+<div class="col s12 m2">
+  <p class="z-depth-3">
+    <h1 class="desc-box">
+    	<div class="icon"><%= image_tag("browser.png", :alt => "Browser") %></div>
+    	<div class="icon"><%= image_tag("envelope.png", :alt => "Envelope") %></div>
+    	<div class="icon"><%= image_tag("hierarchical-structure.png", :alt => "Browser") %></div>
+    	<div class="icon"><%= image_tag("photo-camera.png", :alt => "Browser") %></div>
+    	<div class="text">Connect. Share.</div>
+    </h1>
+  </p>
+</div>
 </body>
