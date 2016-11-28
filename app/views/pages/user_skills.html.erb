@@ -18,7 +18,7 @@
 
     <div class = "menu_item hoverable">
       <i class="fa fa-graduation-cap" aria-hidden="true"></i> 
-      <a href = "#" class = "item-left-margin">
+      <a href = "user_education" class = "item-left-margin">
         Education
       </a>
     </div>
@@ -34,26 +34,34 @@
     <div class = "menu_item hoverable">
      <i class="fa fa-briefcase" aria-hidden="true">
      </i> 
-     <a href = "#" class = "item-left-margin">
+     <a href = "user_experiences" class = "item-left-margin">
       Experiences
      </a>
     </div>
   </div>
 
-<%if false %>
 
-  <% @skills.each do |skill_var| %>
-    <div class = "profile_info">  
-      <div class = "title">Skill</div>
-      <div class = "content"><%= skill_var.skill %></div>
-      <div class = "edit_profile">
-          <%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_skill_path(skill_var), class: 'btn-floating tooltipped btn-large waves-effect waves-light hoverable' %>
+
+<%if @skill_exists %>
+
+  <% @skills.each do |skill| %>
+    <%if skill.user.id == current_user.id %>
+      <div class = "skill-block">  
+        <div class = "title">Skill</div>
+        <div class = "content"><%= skill.name %></div>
+        <div class = "skill-edit">
+          <%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_skill_path(skill), class: 'btn-floating waves-effect waves-light hoverable' %> 
+        </div> 
+        <div class = "skill-destroy">
+          <%= link_to '<i class="material-icons">delete</i>'.html_safe, skill, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-floating red waves-effect waves-light hoverable'%>
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
-  
+  <div class = "new_profile section">
+    <center><%= link_to '<i class="material-icons">add</i>'.html_safe, new_skill_path, class: 'btn-floating tooltipped btn-large waves-effect waves-light hoverable' %>
+  </div>
 <% else %>
-
 <div class = "new_profile">
   <center><div id = "no_show">Add a skill</p></div><br>
   <%= link_to '<i class="material-icons">add</i>'.html_safe, new_skill_path, class: 'btn-floating tooltipped btn-large waves-effect waves-light hoverable' %>

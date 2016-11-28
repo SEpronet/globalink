@@ -19,9 +19,27 @@ class PagesController < ApplicationController
     end
   end
 
-  def skills
+  def user_skills
     @skill_exists = false
-    @skills = Skill.all
-    @skill_exists = true
+    if Skill.exists?(user_id: current_user.id)
+      @skill_exists = true
+      @skills = Skill.all
+    end
+  end
+
+  def user_education
+    @education_exists = false
+    if Education.exists?(user_id: current_user.id)
+      @education_exists = true
+      @education = Education.all
+    end
+  end
+
+  def user_experiences
+    @experience_exists = false
+    if Experience.exists?(user_id: current_user.id)
+      @experience_exists = true
+      @experience = Experience.all
+    end
   end
 end

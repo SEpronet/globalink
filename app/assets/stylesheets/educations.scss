@@ -1,0 +1,33 @@
+// Place all the styles related to the Educations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.education-block{
+	display: block;
+	height: 400px;
+	width: 518px;
+	word-wrap: break-word;
+	margin: auto;
+	margin-left: 420px;
+	padding-top: 60px;
+	margin-top: 10px;
+	border-bottom: solid 1px;
+	border-color: #b0bec5;
+}
+
+.education-block .education-edit{
+	display: block;
+	width: 44px;
+	position: relative;
+	left: 400px;
+	bottom: 419px;
+}
+
+.education-block .education-destroy{
+	display: block;
+	width: 44px;
+	position: relative;
+	left: 450px;
+	bottom: 459px;
+}
+

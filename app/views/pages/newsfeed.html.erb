@@ -34,9 +34,9 @@
                     </div>
 
                     <%if current_user == post.user%>
-                    <div class = "destroy hoverable material-icons">
-                      <%= link_to 'delete', method: :delete, data: { confirm: 'Are you sure?' } %></br>
-                    </div>
+                      <div class = "destroy hoverable material-icons">
+                        <%= link_to 'delete', method: :delete, data: { confirm: 'Are you sure?' } %></br>
+                      </div>
                     <%end%>
                 </div>
               </div>  

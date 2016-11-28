@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161125131557) do
+ActiveRecord::Schema.define(version: 20161128004157) do
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title",            limit: 50,    default: ""
@@ -24,6 +24,31 @@ ActiveRecord::Schema.define(version: 20161125131557) do
     t.index ["commentable_id"], name: "index_comments_on_commentable_id", using: :btree
     t.index ["commentable_type"], name: "index_comments_on_commentable_type", using: :btree
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
+  end
+
+  create_table "educations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "location"
+    t.date     "enroll"
+    t.date     "grad"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean  "ongoing"
+    t.index ["user_id"], name: "index_educations_on_user_id", using: :btree
+  end
+
+  create_table "experiences", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "company_name"
+    t.string   "title"
+    t.string   "location"
+    t.date     "from"
+    t.date     "to"
+    t.text     "description",  limit: 65535
+    t.integer  "user_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.index ["user_id"], name: "index_experiences_on_user_id", using: :btree
   end
 
   create_table "friendships", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -51,7 +76,7 @@ ActiveRecord::Schema.define(version: 20161125131557) do
   end
 
   create_table "skills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "skill"
+    t.string   "name"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -97,6 +122,8 @@ ActiveRecord::Schema.define(version: 20161125131557) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
   end
 
+  add_foreign_key "educations", "users"
+  add_foreign_key "experiences", "users"
   add_foreign_key "posts", "users"
   add_foreign_key "profiles", "users"
   add_foreign_key "skills", "users"

@@ -1,0 +1,76 @@
+<div class = "user">
+	<div class = "user_basic teal lighten-2">
+		<%= image_tag(current_user.avatar.url, size: "200x200", :alt => "default profile photo", class: 'photo') %>
+		<div class = "name">
+			<%= current_user.firstname %> <%= current_user.lastname %></br>
+			<div id = "title"><%= current_user.title %></div>
+		</div>
+	</div>
+
+<div class = "profile_menu">
+
+    <div class = "menu_item hoverable">
+      <i class="fa fa-address-card-o" aria-hidden="true"></i> 
+      <a href = "user_profile" class = "item-left-margin">
+        Overview
+      </a>
+    </div>
+
+    <div class = "menu_item hoverable">
+      <i class="fa fa-graduation-cap active" aria-hidden="true"></i> 
+      <a href = "user_education" class = "item-left-margin active">
+        Education
+      </a>
+      <i class="fa fa-arrow-circle-right active" aria-hidden="true"></i>
+    </div>
+
+    <div class = "menu_item hoverable">
+     <i class="fa fa-code" aria-hidden="true"></i>
+      <a href = "user_skills" class = "item-left-margin">
+        Skills
+      </a>
+    </div>
+
+    <div class = "menu_item hoverable">
+     <i class="fa fa-briefcase" aria-hidden="true">
+     </i> 
+     <a href = "user_experiences" class = "item-left-margin">
+      Experiences
+     </a>
+    </div>
+</div>
+
+<%if @education_exists %>
+
+  <% @education.each do |education| %>
+    <%if education.user.id == current_user.id %>
+      <div class = "education-block">  
+        <div class = "title">Institution</div>
+        <div class = "content"><%= education.name %></div>
+        <div class = "title">Location</div>
+        <div class = "content"><%= education.location %></div>
+        <div class = "row">
+          <div class = "title">Enrollment</div>
+          <div class = "content"><%= education.enroll %></div>
+          <div class = "title">Graduation</div>
+          <div class = "content"><%= education.grad %></div>
+        </div>
+        <div class = "education-edit">
+          <%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_education_path(education), class: 'btn-floating waves-effect waves-light hoverable' %> 
+        </div> 
+        <div class = "education-destroy">
+          <%= link_to '<i class="material-icons">delete</i>'.html_safe, education, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-floating red waves-effect waves-light hoverable'%>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  <div class = "new_profile section">
+    <center><%= link_to '<i class="material-icons">add</i>'.html_safe, new_education_path, class: 'btn-floating tooltipped btn-large waves-effect waves-light hoverable' %>
+  </div>
+<% else %>
+<div class = "new_profile">
+  <center><div id = "no_show">Add an Instituion</p></div><br>
+  <%= link_to '<i class="material-icons">add</i>'.html_safe, new_education_path, class: 'btn-floating tooltipped btn-large waves-effect waves-light hoverable' %>
+</div>
+
+<% end %>

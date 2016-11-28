@@ -1,0 +1,48 @@
+// Place all the styles related to the Experiences controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.experience-from{
+	display: inline-block;
+	position: relative;
+	margin-top: 10px;
+	left: 130px;
+	bottom: 34px;
+	height: 30px;
+	width: 85px;
+	word-wrap: break-word;
+	font-family: "tahoma";
+	font-weight: normal;
+	font-size: 15px;
+	color: #1D3D4C; 
+}
+
+.experience-to{
+	display: inline-block;
+	position: relative;
+	margin-top: 10px;
+	left: 30px;
+	bottom: 34px;
+	height: 30px;
+	width: 85px;
+	word-wrap: break-word;
+	font-family: "tahoma";
+	font-weight: normal;
+	font-size: 15px;
+	color: #1D3D4C; 
+}
+
+.TO{
+	display: inline-block;
+	position: relative;
+	margin-top: 10px;
+	left: 110px;
+	bottom: 34px;
+	height: 30px;
+	width: 25px;
+	word-wrap: break-word;
+	font-family: "tahoma";
+	font-weight: normal;
+	font-size: 15px;
+	color: #1D3D4C; 
+}

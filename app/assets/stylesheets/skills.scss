@@ -5,3 +5,69 @@
 .skills-text-area{
 	width: 400px !important;
 }
+
+.skill-block{	
+	display: block;
+	height: 130px;
+	width: 518px;
+	word-wrap: break-word;
+	margin: auto;
+	margin-left: 420px;
+	padding-top: 60px;
+	margin-top: 10px;
+	border-bottom: solid 1px;
+	border-color: #b0bec5;
+}
+
+.title{
+	display: block;
+	position: relative;
+	height: 37px;
+	width: 110px;
+	padding-top: 7px;
+	margin-left: 15px;
+	margin-top: 10px;
+	text-align: right;
+	font-family: "tahoma";
+	font-weight: bold;
+	font-size: 18px;
+	color: #1D3D4C;
+	border-bottom: solid 1px;
+	border-bottom-color: #73A1B2;
+}
+
+.content{
+	display: inline-block;
+	position: relative;
+	margin-top: 5px;
+	left: 145px;
+	bottom: 34px;
+	min-height: 40px;
+	width: 385px;
+	word-wrap: break-word;
+	font-family: "tahoma";
+	font-weight: normal;
+	font-size: 15px;
+	color: #1D3D4C; 
+}
+
+.skill-block .skill-edit{
+	display: block;
+	width: 44px;
+	position: relative;
+	left: 400px;
+	bottom: 150px;
+}
+
+.skill-block .skill-destroy{
+	display: block;
+	width: 44px;
+	position: relative;
+	left: 450px;
+	bottom: 189px;
+}
+
+.div-margin-skill{
+	margin-top: -80px;
+	margin-bottom: 20px;
+}

@@ -15,6 +15,7 @@ class SkillsController < ApplicationController
   # GET /skills/new
   def new
     @skill = Skill.new
+    @disable_nav = true
   end
 
   # GET /skills/1/edit
@@ -26,7 +27,7 @@ class SkillsController < ApplicationController
   # POST /skills.json
   def create
     @skill = Skill.new(skill_params)
-    @skill.user = current_user
+    @skill.user_id = current_user.id
     respond_to do |format|
       if @skill.save
         format.html { redirect_to :controller => 'pages', :action => 'user_skills', notice: 'Skill was successfully created.' }
@@ -57,7 +58,7 @@ class SkillsController < ApplicationController
   def destroy
     @skill.destroy
     respond_to do |format|
-      format.html { redirect_to :controller => 'pages', :action => 'user_profile', notice: 'Skill was successfully destroyed.' }
+      format.html { redirect_to :controller => 'pages', :action => 'user_skills', notice: 'Skill was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -70,6 +71,6 @@ class SkillsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def skill_params
-      params.require(:skill).permit(:skill, :user_id)
+      params.require(:skill).permit(:name, :user_id)
     end
 end

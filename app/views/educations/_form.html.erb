@@ -1,0 +1,50 @@
+<%= form_for(education) do |f| %>
+  <% if education.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(education.errors.count, "error") %> prohibited this education from being saved:</h2>
+
+      <ul>
+      <% education.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class = "container">
+
+      <%= f.label 'Name of Institution', class: 'label' %>
+      <%= f.text_field :name, class: 'input' %>
+
+    <div class="field">
+      <%= f.label :location, class: 'label' %>
+      <%= f.text_field :location %>
+    </div>
+
+    <label class="label">Duration</label>
+    <div class = "row">
+      <div class="field col s6">
+        <%= f.label 'Enrollment Date' %>
+        <%= f.text_field :enroll, class: 'datepicker hoverable' %>
+      </div>
+
+      <div class="field col s6">
+        <%= f.label 'Graduation Date' %>
+          <%= f.text_field :grad, class: 'datepicker hoverable'%>
+      </div>
+    </div>
+    <script>
+      $( '.datepicker' ).pickadate({
+
+          onOpen: function() { $('pre').css('overflow', 'hidden') },
+          onClose: function() { $('pre').css('overflow', '') }
+      })
+    </script>
+
+    <div class="actions">
+      <center><%= button_tag type: 'submit', class: "waves-effect waves-light btn hoverable" do %>
+            <i class="fa fa-check" aria-hidden="true"></i> Save
+        <% end %>
+    </div>
+  </div>
+<% end %>

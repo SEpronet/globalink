@@ -26,7 +26,12 @@
             <li><a href="about">About</a></li>
             <li><a>
               <%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %>
-            </a></li>
+            </a></li>   
+            <li><div class="input-field">
+              <input id="search" type="search" required>
+              <label for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div></li>
           </ul>
         </div>
       </nav>
