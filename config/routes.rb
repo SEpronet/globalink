@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :searches
   resources :experiences
   resources :educations
   resources :educations
@@ -44,6 +45,8 @@ Rails.application.routes.draw do
   get 'user_skills', to: 'pages#user_skills', as: :currentskills
   get 'user_education', to: 'pages#user_education', as: :currenteducation
   get 'user_experiences', to: 'pages#user_experiences', as: :currentexperiences
+  get 'search_results', to: 'pages#profile_post_search_results', as: :search_results
+  get 'search', to: 'pages#search_results', as: :search_page
 
   mount Commontator::Engine => '/commontator'
   

@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+
   def home
   end
 
@@ -41,5 +42,41 @@ class PagesController < ApplicationController
       @experience_exists = true
       @experience = Experience.all
     end
+  end
+
+  def profile_post_search_results
+    @search_new = Search.new 
+    @searches = Search.all
+    @profiles = User.all
+    @posts = Post.all
+
+    @searches.each do |search|
+      #this key is what the user entered
+      @key = search.search_field
+    end 
+
+    @post_list = Array.new
+    @profile_list = Array.new
+    if @key.include? "#"
+      @posts.each do |post|
+        if post.content.downcase.include? @key.downcase
+          @post_list << post
+        end
+      end 
+    end
+
+    else
+      @profiles.each do |profile|
+        if @key.downcase.include? profile.firstname.downcase or @key.downcase.include? profile.lastname.downcase
+          @profile_list << profile
+        
+      end
+    end
+
+    Search.delete_all
+  end
+
+  def search_results
+    @search= Search.new 
   end
 end

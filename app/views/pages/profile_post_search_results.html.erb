@@ -1,0 +1,42 @@
+<%= form_for(@search_new) do |f| %>
+  
+  	<div class = "container">
+  		<div class="input-field col s6">
+			<%= f.text_field :search_field %>
+		</div>
+
+		<div class="actions">
+        <center><%= button_tag type: 'submit', class: "btn-floating btn-large waves-effect waves-light hoverable" do %>
+            <i class="material-icons prefix">search</i>
+        <% end %>
+      </div>
+	</div>
+<% end %>
+
+
+<div class = "container">
+	<div class = "user">
+  	<div class = "heading">Search Results</div>
+	</div>
+	<div class="col s6 offset-s6">
+		<% @searches.each do |search| %>
+			<% @key = search.search_field %>
+
+		<% end %>
+		<% if @key.include? "#" %>
+			<% @post_list.each do |post| %>
+				<div class="section">
+	    			<h5><%= link_to "#{post.user.firstname} #{post.user.lastname}", show_user_url(post.user.id)%></h5>
+	    			<p><%= post.content %></p>
+	  			</div>
+	  			<div class="divider"></div>
+			<% end %>
+		<%end%>
+
+		<% if !(@key.include? "#") %>
+			<% @profile_list.each do |profile| %>
+				<center><div class = "name"><%= link_to "#{profile.firstname} #{profile.lastname}", show_user_url(profile.id)%></br></div>
+			<% end %>
+		<%end%>
+	</div>
+</div>
