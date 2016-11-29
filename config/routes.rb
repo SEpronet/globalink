@@ -48,6 +48,7 @@ Rails.application.routes.draw do
   get 'user_experiences', to: 'pages#user_experiences', as: :currentexperiences
   get 'search_results', to: 'pages#profile_post_search_results', as: :search_results
   get 'search', to: 'pages#search_results', as: :search_page
+  get 'company_page', to: 'companies#index', as: :my_companies
 
   mount Commontator::Engine => '/commontator'
   

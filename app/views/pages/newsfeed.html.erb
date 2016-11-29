@@ -22,30 +22,30 @@
   </div>
 
     <div class = "post-block teal lighten-2">
-      <% @posts.each do |post| %>
-        <div class = "center">
-              <div class="card_center_2">
-                <div class="card teal darken-1">
-                    <span class="card-title"><%= post.user.firstname %> <%= post.user.lastname %></span>
-                    <div class = "dateNtime"><%= time_ago_in_words(post.created_at) %> ago</div>
-                    <div class="divider blue-grey lighten-3"></div> 
-                    <div class="card-content white-text">
-                      <p><%= post.content %></p>
-                    </div>
-
-                    
-                    <%if current_user == post.user%>
-                      <div class = "destroy hoverable material-icons">
-                        <%= link_to 'delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></br>
+      <% unless @posts == nil%>
+        <% @posts.each do |post| %>
+          <div class = "center">
+                <div class="card_center_2">
+                  <div class="card teal darken-1">
+                      <span class="card-title"><%= post.user.firstname %> <%= post.user.lastname %></span>
+                      <div class = "dateNtime"><%= time_ago_in_words(post.created_at) %> ago</div>
+                      <div class="divider blue-grey lighten-3"></div> 
+                      <div class="card-content white-text">
+                        <p><%= post.content %></p>
                       </div>
-                    <%end%>
-                </div>
-              </div>  
-        </div> 
-                      <div class = "comment-link">
-                      <%= commontator_thread(post) %>
-                    </div>
+                      <%if current_user == post.user%>
+                        <div class = "destroy hoverable material-icons">
+                          <%= link_to 'delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></br>
+                        </div>
+                      <%end%>
+                  </div>
+                </div>  
+          </div> 
+                        <div class = "comment-link">
+                        <%= commontator_thread(post) %>
+                      </div>
 
+        <% end %>
       <% end %>
     </div>
 </span>
