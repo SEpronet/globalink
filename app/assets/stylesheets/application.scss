@@ -13,6 +13,7 @@
  *= require pickadate/default
  *= require pickadate/default.date
  *= require_tree .
+ *= require commontator/application
  */
 
 @import "font-awesome-sprockets";
@@ -42,6 +43,12 @@ a{
 
 .nav-wrapper .input-field{
   height: 62px !important;
+}
+
+.edit_account_button{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
 
 /*flash*/

@@ -1,0 +1,84 @@
+<div class = "user">
+	<div class = "user_basic teal lighten-2">
+		<%= image_tag(current_user.avatar.url, size: "200x200", :alt => "default profile photo", class: 'photo') %>
+		<div class = "name">
+			<%= current_user.firstname %> <%= current_user.lastname %></br>
+			<div id = "title"><%= current_user.title %></div>
+		</div>
+	</div>
+
+<div class = "profile_menu">
+
+    <div class = "menu_item hoverable">
+      <i class="fa fa-address-card-o" aria-hidden="true"></i> 
+      <a href = "user_profile" class = "item-left-margin">
+        Overview
+      </a>
+    </div>
+
+    <div class = "menu_item hoverable">
+      <i class="fa fa-graduation-cap" aria-hidden="true"></i> 
+      <a href = "user_education" class = "item-left-margin">
+        Education
+      </a>
+    </div>
+
+    <div class = "menu_item hoverable">
+     <i class="fa fa-code" aria-hidden="true"></i>
+      <a href = "user_skills" class = "item-left-margin">
+        Skills
+      </a>
+    </div>
+
+    <div class = "menu_item hoverable">
+     <i class="fa fa-briefcase active" aria-hidden="true">
+     </i> 
+     <a href = "user_experiences" class = "item-left-margin active">
+      Experiences
+     </a>
+      <i class="fa fa-arrow-circle-right active" aria-hidden="true"></i>
+    </div>
+</div>
+
+<%if @experience_exists %>
+
+  <% @experience.each do |experience| %>
+    <%if experience.user.id == current_user.id %>
+      <div class = "education-block">  
+        <div class = "title">Company</div>
+        <div class = "content"><%= experience.company_name %></div>
+        <div class = "title">Title</div>
+        <div class = "content"><%= experience.title %></div>
+        <div class = "row">
+        <div class = "title">Location</div>
+        <div class = "content"><%= experience.location %></div>
+        <div class = "title">Duration</div>
+        <div class="col s3">
+          <div class = "experience-from"><%= experience.from %></div>
+        </div>
+        <div class="col s3">
+          <div class = "TO">To</div>
+        </div>
+        <div class="col s3">
+          <div class = "experience-to"><%= experience.to %></div>
+        </div>
+        </div>
+        <div class = "education-edit">
+          <%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_experience_path(experience), class: 'btn-floating waves-effect waves-light hoverable' %> 
+        </div> 
+        <div class = "education-destroy">
+          <%= link_to '<i class="material-icons">delete</i>'.html_safe, experience, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-floating red waves-effect waves-light hoverable'%>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+  <div class = "new_profile section">
+    <center><%= link_to '<i class="material-icons">add</i>'.html_safe, new_experience_path, class: 'btn-floating tooltipped btn-large waves-effect waves-light hoverable' %>
+  </div>
+<% else %>
+<div class = "new_profile">
+  <center><div id = "no_show">Add an Experience</p></div><br>
+  <%= link_to '<i class="material-icons">add</i>'.html_safe, new_experience_path, class: 'btn-floating tooltipped btn-large waves-effect waves-light hoverable' %>
+</div>
+
+<% end %>
