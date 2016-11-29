@@ -1,5 +1,5 @@
 <!-- #everything on here was added by Jozef, connects.html.erb -->
-<h3> <strong> this is the myconnectspage </strong> </h1>
+<div class = "user"> <div class = "heading"> Connections </div> </div>
 
 <% if current_user.friendships.size > 0 %>
  
@@ -24,7 +24,7 @@
 					<td><%= friendship.friend.email %></td>
 					<td>
 						
-						<%= link_to "view profile", user_path(friendship.friend), class:"btn btn-primary btn-xs" %>
+						<%= link_to "view profile", show_user_url(friendship.friend), class:"btn btn-primary btn-xs" %>
 						<%= link_to 'Remove Friend', friendship_path(friendship.friend),
 											:method => :delete,
 											:data => { :confirm => "Are you sure?"},

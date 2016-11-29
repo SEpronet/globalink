@@ -26,6 +26,11 @@ class UsersController < ApplicationController
 	      @show_experience = true
 	      @experience = Experience.all
 	    end
+
+	    @not_friends = true
+		if current_user.friendships.exists?(friend_id: @user.id)
+			@not_friends = false
+		end
 	end
 	
 end
