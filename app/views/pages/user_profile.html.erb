@@ -1,5 +1,5 @@
 <div class = "user">
-	<div class = "user_basic teal lighten-2">
+	<div class = "user_basic cyan lighten-5">
 		<%= image_tag(current_user.avatar.url, size: "200x200", :alt => "default profile photo", class: 'photo') %>
 		<div class = "name">
 			<%= current_user.firstname %> <%= current_user.lastname %></br> 
@@ -59,7 +59,7 @@
 <%if @profile_exists %>
 
   <div class = "edit_profile">
-      <%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_profile_path(@profile), class: 'btn-floating tooltipped btn-large waves-effect waves-light hoverable' %>
+      <%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_profile_path(@profile), class: 'btn-floating tooltipped btn-large waves-effect waves-light teal accent-4 hoverable' %>
   </div>
   <div class = "profile_info">  
     <div class = "title">Bio</div>
