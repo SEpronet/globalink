@@ -7,8 +7,11 @@ class PagesController < ApplicationController
   end
 
   def newsfeed
+    friendships = current_user.friendships.pluck(:id) << current_user.id
+    @posts = Post.where(user_id: friendships)
+
   	@post = Post.new
-  	@posts = Post.all.order(created_at: :desc)
+  	@posts2 = Post.all.order(created_at: :desc)
   end
 
   def user_profile
@@ -53,13 +56,11 @@ class PagesController < ApplicationController
     @searches = Search.all
     @profiles = User.all
     @posts = Post.all
+    @failed = false
 
     @searches.each do |search|
       #this key is what the user entered
-      unless search==nil
         @key = search.search_field
-        break
-      end
     end 
 
     @post_list = Array.new
@@ -67,6 +68,7 @@ class PagesController < ApplicationController
     if @key.include? "#"
       @posts.each do |post|
         if post.content.downcase.include? @key.downcase
+          @failed = true
           @post_list << post
         end
       end 
@@ -75,8 +77,8 @@ class PagesController < ApplicationController
     else
       @profiles.each do |profile|
         if @key.downcase.include? profile.firstname.downcase or @key.downcase.include? profile.lastname.downcase
+          @failed = true
           @profile_list << profile
-        
       end
     end
 

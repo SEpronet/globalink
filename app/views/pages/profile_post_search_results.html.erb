@@ -18,6 +18,9 @@
 	<div class = "user">
   	<div class = "heading">Search Results</div>
 	</div>
+	<% @searches.each do |search| %>
+		<% @key = search.search_field %>
+	<% end %>
 	<div class="col s6 offset-s6">
 		<% if @key.include? "#" %>
 			<% @post_list.each do |post| %>
@@ -27,12 +30,13 @@
 	  			</div>
 	  			<div class="divider"></div>
 			<% end %>
-		<%end%>
-
-		<% if !(@key.include? "#") %>
+		<%elsif !(@key.include? "#")%>
 			<% @profile_list.each do |profile| %>
 				<center><div class = "section"><%= link_to "#{profile.firstname} #{profile.lastname}", show_user_url(profile.id)%></br></div><div class="divider"></div>
 			<% end %>
-		<%end%>
+		<% end %>
+		<%if @failed%>
+			<center><div id = "no_show">Nothing to show here.</div>
+		<% end %>
 	</div>
 </div>
