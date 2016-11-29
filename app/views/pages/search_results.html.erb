@@ -1,0 +1,14 @@
+<%= form_for(@search) do |f| %>
+  
+  	<div class = "container">
+  		<div class="input-field col s6">
+			<%= f.text_field :search_field %>
+		</div>
+
+		<div class="actions">
+        <center><%= button_tag type: 'submit', class: "btn-floating btn-large waves-effect waves-light hoverable" do %>
+            <i class="material-icons prefix">search</i>
+        <% end %>
+      </div>
+	</div>
+<% end %>

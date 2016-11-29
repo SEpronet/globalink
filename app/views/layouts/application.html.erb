@@ -27,11 +27,9 @@
             <li><a>
               <%= link_to('Sign Out', destroy_user_session_path, :method => :delete) %>
             </a></li>   
-            <li><div class="input-field">
-              <input id="search" type="search" required>
-              <label for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i>
-            </div></li>
+            <li><a>
+              <%= link_to '<i class="material-icons">search</i></li>'.html_safe, search_page_url, class: 'material-icons' %>
+            </a></li>
           </ul>
         </div>
       </nav>
