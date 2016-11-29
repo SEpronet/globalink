@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 20161129101112) do
     t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true, using: :btree
   end
 
-<<<<<<< HEAD
   create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "location"
@@ -60,7 +59,8 @@ ActiveRecord::Schema.define(version: 20161129101112) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_companies_on_user_id", using: :btree
-=======
+  end
+
   create_table "contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "law_id"
     t.integer  "parent_id"
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 20161129101112) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
->>>>>>> 47c49b2e72cd4f69beb128322ed19020c1a0d45d
+
   end
 
   create_table "educations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

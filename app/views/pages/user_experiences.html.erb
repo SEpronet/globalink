@@ -1,5 +1,5 @@
 <div class = "user">
-	<div class = "user_basic teal lighten-2">
+	<div class = "user_basic cyan lighten-5">
 		<%= image_tag(current_user.avatar.url, size: "200x200", :alt => "default profile photo", class: 'photo') %>
 		<div class = "name">
 			<%= current_user.firstname %> <%= current_user.lastname %></br>
@@ -63,7 +63,7 @@
         </div>
         </div>
         <div class = "education-edit">
-          <%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_experience_path(experience), class: 'btn-floating waves-effect waves-light hoverable' %> 
+          <%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_experience_path(experience), class: 'btn-floating waves-effect waves-light teal accent-4 hoverable' %> 
         </div> 
         <div class = "education-destroy">
           <%= link_to '<i class="material-icons">delete</i>'.html_safe, experience, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-floating red waves-effect waves-light hoverable'%>
@@ -72,12 +72,12 @@
     <% end %>
   <% end %>
   <div class = "new_profile section">
-    <center><%= link_to '<i class="material-icons">add</i>'.html_safe, new_experience_path, class: 'btn-floating tooltipped btn-large waves-effect waves-light hoverable' %>
+    <center><%= link_to '<i class="material-icons">add</i>'.html_safe, new_experience_path, class: 'btn-floating tooltipped btn-large waves-effect waves-light teal accent-4 hoverable' %>
   </div>
 <% else %>
 <div class = "new_profile">
   <center><div id = "no_show">Add an Experience</p></div><br>
-  <%= link_to '<i class="material-icons">add</i>'.html_safe, new_experience_path, class: 'btn-floating tooltipped btn-large waves-effect waves-light hoverable' %>
+  <%= link_to '<i class="material-icons">add</i>'.html_safe, new_experience_path, class: 'btn-floating tooltipped btn-large waves-effect waves-light teal accent-4 hoverable' %>
 </div>
 
 <% end %>
