@@ -7,12 +7,12 @@
     <div class="row">
       <div class="col s12 m6">
         <div class="card_center">
-          <div class="card teal darken-1 hoverable">
+          <div class="card teal lighten-2 hoverable">
               <div class="card-content white-text">
                 <%= form_for(@post) do |f| %>
                   <span class="card-title">Update Status</span>
                   <%= f.text_area :content, id: "textarea1", class: "materialize-textarea", autofocus: false %>
-                  <%= f.submit 'Post', class: 'btn-floating btn-large waves-effect waves-light hoverable'%>
+                  <%= f.submit 'Post', class: 'btn-floating btn-large waves-effect waves-light  amber hoverable'%>
                 <% end %>
               </div>
           </div>
@@ -21,30 +21,30 @@
     </div>
   </div>
 
-    <div class = "post-block teal lighten-2">
+    <div class = "post-block teal lighten-5">
       <% @posts.each do |post| %>
         <div class = "center">
               <div class="card_center_2">
-                <div class="card teal darken-1">
-                    <span class="card-title"><%= post.user.firstname %> <%= post.user.lastname %></span>
+                <div class="card teal lighten-1">
+                    <span class="card-title" style="font-weight: bold;"><%= post.user.firstname %> <%= post.user.lastname %></span>
                     <div class = "dateNtime"><%= time_ago_in_words(post.created_at) %> ago</div>
-                    <div class="divider blue-grey lighten-3"></div> 
+                    <div class="divider grey lighten-5"></div> 
                     <div class="card-content white-text">
                       <p><%= post.content %></p>
                     </div>
 
                     
                     <%if current_user == post.user%>
-                      <div class = "destroy hoverable material-icons">
+                      <div class = "destroy hoverable material-icons ">
                         <%= link_to 'delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></br>
                       </div>
                     <%end%>
                 </div>
               </div>  
         </div> 
-                      <div class = "comment-link">
-                      <%= commontator_thread(post) %>
-                    </div>
+        <div class = "comment-link">
+            <%= commontator_thread(post) %>
+         </div>             
 
       <% end %>
     </div>

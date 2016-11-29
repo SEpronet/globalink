@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20161129101112) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_companies_on_user_id", using: :btree
+  end
 
   create_table "contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "law_id"
@@ -69,7 +70,6 @@ ActiveRecord::Schema.define(version: 20161129101112) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
-
   end
 
   create_table "educations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -157,6 +157,7 @@ ActiveRecord::Schema.define(version: 20161129101112) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
+
   add_foreign_key "companies", "users"
   add_foreign_key "educations", "users"
   add_foreign_key "experiences", "users"
