@@ -12,20 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20161129101112) do
 
-  create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "title",            limit: 50,    default: ""
-    t.text     "comment",          limit: 65535
-    t.string   "commentable_type"
-    t.integer  "commentable_id"
-    t.integer  "user_id"
-    t.string   "role",                           default: "comments"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["commentable_id"], name: "index_comments_on_commentable_id", using: :btree
-    t.index ["commentable_type"], name: "index_comments_on_commentable_type", using: :btree
-    t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
-  end
-
   create_table "commontator_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "creator_type"
     t.integer  "creator_id"
@@ -65,6 +51,7 @@ ActiveRecord::Schema.define(version: 20161129101112) do
     t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true, using: :btree
   end
 
+<<<<<<< HEAD
   create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "location"
@@ -73,6 +60,17 @@ ActiveRecord::Schema.define(version: 20161129101112) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_companies_on_user_id", using: :btree
+=======
+  create_table "contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "law_id"
+    t.integer  "parent_id"
+    t.string   "titel"
+    t.string   "text"
+    t.string   "content"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+>>>>>>> 47c49b2e72cd4f69beb128322ed19020c1a0d45d
   end
 
   create_table "educations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -153,8 +151,6 @@ ActiveRecord::Schema.define(version: 20161129101112) do
     t.datetime "updated_at",                          null: false
     t.string   "firstname"
     t.string   "lastname"
-    t.string   "title"
-    t.string   "education"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
@@ -163,7 +159,9 @@ ActiveRecord::Schema.define(version: 20161129101112) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+
   add_foreign_key "companies", "users"
+
   add_foreign_key "educations", "users"
   add_foreign_key "experiences", "users"
   add_foreign_key "posts", "users"

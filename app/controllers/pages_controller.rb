@@ -76,7 +76,7 @@ class PagesController < ApplicationController
       end
     end
 
-    Search.delete_all
+    # Search.delete_all
   end
 
   def search_results

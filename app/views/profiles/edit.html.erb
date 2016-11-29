@@ -3,7 +3,7 @@
 				<%= image_tag(current_user.avatar.url, size: "200x200", :alt => "default profile photo", class: 'photo') %>
 				<div class = "name">
 					<%= current_user.firstname %> <%= current_user.lastname %></br>
-				<div id = "title"><%= current_user.title %></div>
+				
 			</div>
 		</div>
 	</div>
@@ -11,7 +11,6 @@
 
 <div class = "new_profile">
 	<div class = "heading">Edit Overview</div>
-
 	<%= render 'form', profile: @profile %> 
 	<div class = "profile_back">
 		<%= link_to 'Cancel', currentprofile_path, class: 'back_link waves-light' %>

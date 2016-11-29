@@ -7,8 +7,8 @@
 margin-top: 30px;
 margin-left: auto;
 margin-right: auto;
-width:400px;
-height:400px;
+width:500px;
+height:500px;
 border-radius:50%;
 color:#fff;
 font-size:260px;
@@ -23,10 +23,10 @@ transition: all 0.4s ease-in-out;
 
 
 .circle-content{
-	margin-top:-100%;
+	margin-top:-85%;
 	margin-left: auto;
 	margin-right: auto;
-	background: rgba(63,147,147, 0.8);
+	background: rgba(0,137,123, 0.6);
 	width: inherit;
 	height: inherit;
 	border-radius: 50%;
@@ -92,7 +92,7 @@ body{
 }
 
 .bg{
-	background-color: #b2dfdb !important;
+	background-color: #fff !important;
 }
 
 .pronet-name {
@@ -116,6 +116,7 @@ body{
 .bg-image{
 	opacity: 0.8;
 	position: relative;
+	padding-top: 25px;
 	top: 0;
 	left: 5px;
 	transition: 0.8s ease-in-out;
@@ -132,8 +133,8 @@ body{
 
 .desc-box{
 	bottom: -100%;
-	background: #273340;
-	height: 400px;
+	background: #47ABC9;
+	height: 100px;
 	width: 100%;
 	margin-top: 50px;
 	padding: 10px 10px;
@@ -142,10 +143,13 @@ body{
 }
 
 .text{
-	color: #fff;
-	font: Georgia;
-	margin: 5% 15%;
+	color: #458AC4;
+	font: Verdana;
+	font-weight: bold;
+	font-style: italic;
+	margin: 1% 32%;
 	display: block;
+	font-size: 55%;
 }
 
 
@@ -237,16 +241,32 @@ margin-bottom: 20px;
 /********************************about******************************************/
 
 .about{
-	background: #A8CCCC;
+	background: #fff;
 }
 .about #content{
-	font-size: 20px;
-	color: solid #5c4b3f;
+	font: Verdana;
+	font-size: 24px;
+	color: #008E7F;
 	text-align: center;
-	
 	margin: 10px 200px 10px 200px;
 }
 
+.about #keyword{
+	color: #00685E;
+}
+
+.about #devheading{
+	font: Verdana;
+	color: #214E4A;
+}
+
+.about #name{
+	font-size: 18px;
+}
+
+.about #email{
+	font-size: 15px;
+}
 
 .about #img-box{
 	height: 250px;
