@@ -3,19 +3,19 @@
 				<%= image_tag(current_user.avatar.url, size: "200x200", :alt => "default profile photo", class: 'photo') %>
 				<div class = "name">
 					<%= current_user.firstname %> <%= current_user.lastname %></br>
-				<div id = "title"><%= current_user.title %></div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class = "new_profile">
-	<div class = "heading">Getting Started</div>
 
-	<%= render 'form', profile: @profile %>
+	<div class = "new_profile heading">Getting Started</div>
 
-	<div class = "profile_back">
-		<%= link_to 'Cancel', {controller: "pages", action: "user_profile", class: 'back_link'} %>
+	<div class = "move-left">
+
+		<%= render 'form', profile: @profile %>
+
+		<div class = "new_profile profile_back">
+			<%= link_to 'Cancel', {controller: "pages", action: "user_profile", class: 'back_link'} %>
+		</div>
 	</div>
-	
-</div>

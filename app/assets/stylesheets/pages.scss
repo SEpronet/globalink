@@ -7,8 +7,8 @@
 margin-top: 30px;
 margin-left: auto;
 margin-right: auto;
-width:400px;
-height:400px;
+width:500px;
+height:500px;
 border-radius:50%;
 color:#fff;
 font-size:260px;
@@ -23,7 +23,7 @@ transition: all 0.4s ease-in-out;
 
 
 .circle-content{
-	margin-top:-100%;
+	margin-top:-80%;
 	margin-left: auto;
 	margin-right: auto;
 	background: rgba(63,147,147, 0.8);
@@ -132,8 +132,8 @@ body{
 
 .desc-box{
 	bottom: -100%;
-	background: #273340;
-	height: 400px;
+	background: #47ABC9;
+	height: 100px;
 	width: 100%;
 	margin-top: 50px;
 	padding: 10px 10px;
@@ -144,8 +144,10 @@ body{
 .text{
 	color: #fff;
 	font: Georgia;
-	margin: 5% 15%;
+	margin: 1% 30%;
 	display: block;
+	font-style: italic;
+	font-size: 65%;
 }
 
 

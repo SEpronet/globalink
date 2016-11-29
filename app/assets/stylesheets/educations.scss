@@ -15,12 +15,27 @@
 	border-color: #b0bec5;
 }
 
+.education .content{
+	display: inline-block;
+	position: relative;
+	margin-top: 5px;
+	left: 145px;
+	bottom: 34px;
+	min-height: 20px;
+	width: 385px;
+	word-wrap: break-word;
+	font-family: "tahoma";
+	font-weight: normal;
+	font-size: 15px;
+	color: #1D3D4C; 
+}
+
 .education-block .education-edit{
 	display: block;
 	width: 44px;
 	position: relative;
 	left: 400px;
-	bottom: 419px;
+	bottom: 35px;
 }
 
 .education-block .education-destroy{
@@ -28,6 +43,6 @@
 	width: 44px;
 	position: relative;
 	left: 450px;
-	bottom: 459px;
+	bottom: 75px;
 }
 

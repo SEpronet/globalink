@@ -3,8 +3,7 @@
 		<%= image_tag(current_user.avatar.url, size: "200x200", :alt => "default profile photo", class: 'photo') %>
 		<div class = "name">
 			<%= current_user.firstname %> <%= current_user.lastname %></br>
-			<div id = "title"><%= current_user.title %></div>
-		</div>
+    </div>
 	</div>
                 
 <div class = "profile_menu">
@@ -43,11 +42,12 @@
 
 
 <%if @skill_exists %>
-
+  <div class = "skills">
+    <div class = "heading"> Skills </div>
+  </div>
   <% @skills.each do |skill| %>
     <%if skill.user.id == current_user.id %>
       <div class = "skill-block">  
-        <div class = "title">Skill</div>
         <div class = "content"><%= skill.name %></div>
         <div class = "skill-edit">
           <%= link_to '<i class="material-icons">mode_edit</i>'.html_safe, edit_skill_path(skill), class: 'btn-floating waves-effect waves-light hoverable' %> 

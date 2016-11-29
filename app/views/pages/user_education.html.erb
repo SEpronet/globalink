@@ -3,7 +3,6 @@
 		<%= image_tag(current_user.avatar.url, size: "200x200", :alt => "default profile photo", class: 'photo') %>
 		<div class = "name">
 			<%= current_user.firstname %> <%= current_user.lastname %></br>
-			<div id = "title"><%= current_user.title %></div>
 		</div>
 	</div>
 
@@ -44,7 +43,7 @@
 
   <% @education.each do |education| %>
     <%if education.user.id == current_user.id %>
-      <div class = "education-block">  
+      <div class = "education-block education">  
         <div class = "title">Institution</div>
         <div class = "content"><%= education.name %></div>
         <div class = "title">Location</div>

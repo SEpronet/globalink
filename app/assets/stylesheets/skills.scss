@@ -8,7 +8,7 @@
 
 .skill-block{	
 	display: block;
-	height: 130px;
+	height: 80px;
 	width: 518px;
 	word-wrap: break-word;
 	margin: auto;
@@ -51,12 +51,26 @@
 	color: #1D3D4C; 
 }
 
+.skills .heading{
+	display: block;
+	height: 100px;
+	width: 600px;
+	margin: auto;
+	position: relative;
+	text-align: center;
+	font-family: "tahoma";
+	font-style: bold;
+	font-size: 70px;
+	margin-top: 10px;
+	color: #3DC39E;
+}
+
 .skill-block .skill-edit{
 	display: block;
 	width: 44px;
 	position: relative;
 	left: 400px;
-	bottom: 150px;
+	bottom: 83px;
 }
 
 .skill-block .skill-destroy{
@@ -64,7 +78,7 @@
 	width: 44px;
 	position: relative;
 	left: 450px;
-	bottom: 189px;
+	bottom: 122px;
 }
 
 .div-margin-skill{
