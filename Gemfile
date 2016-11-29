@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'commontator', '~> 4.11.1'
 gem 'pickadate-rails'
 
 gem 'materialize-sass'

@@ -5,7 +5,7 @@
 			<%= current_user.firstname %> <%= current_user.lastname %></br>
 			<div id = "title"><%= current_user.title %></div>
 		</div>
-	</div>
+  </div>
                             
 <!--<h2>Friends</h2>
 <ul>
@@ -88,3 +88,5 @@
 <% end %>
 
 </div> 
+
+<%= link_to 'user1', show_user_url(current_user.id)%>

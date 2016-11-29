@@ -31,7 +31,7 @@ class ExperiencesController < ApplicationController
 
     respond_to do |format|
       if @experience.save
-        format.html { redirect_to :controller => 'pages', :action => 'user_experiences', notice: 'Experience was successfully created.' }
+        format.html { redirect_to currentexperiences_url, notice: 'Experience was successfully created.' }
         format.json { render :show, status: :created, location: @experience }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class ExperiencesController < ApplicationController
   def update
     respond_to do |format|
       if @experience.update(experience_params)
-        format.html { redirect_to :controller => 'pages', :action => 'user_experiences', notice: 'Experience was successfully updated.' }
+        format.html { redirect_to currentexperiences_url, notice: 'Experience was successfully updated.' }
         format.json { render :show, status: :ok, location: @experience }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class ExperiencesController < ApplicationController
   def destroy
     @experience.destroy
     respond_to do |format|
-      format.html { redirect_to :controller => 'pages', :action => 'user_experiences', notice: 'Experience was successfully destroyed.' }
+      format.html { redirect_to currentexperiences_url, notice: 'Experience was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

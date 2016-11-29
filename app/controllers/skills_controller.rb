@@ -30,7 +30,7 @@ class SkillsController < ApplicationController
     @skill.user_id = current_user.id
     respond_to do |format|
       if @skill.save
-        format.html { redirect_to :controller => 'pages', :action => 'user_skills', notice: 'Skill was successfully created.' }
+        format.html { redirect_to currentskills_url, notice: 'Skill was successfully created.' }
         format.json { render :show, status: :created, location: @skill }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class SkillsController < ApplicationController
   def update
     respond_to do |format|
       if @skill.update(skill_params)
-        format.html { redirect_to :controller => 'pages', :action => 'user_skills', notice: 'Skill was successfully updated.' }
+        format.html { redirect_to currentskills_url, notice: 'Skill was successfully updated.' }
         format.json { render :show, status: :ok, location: @skill }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class SkillsController < ApplicationController
   def destroy
     @skill.destroy
     respond_to do |format|
-      format.html { redirect_to :controller => 'pages', :action => 'user_skills', notice: 'Skill was successfully destroyed.' }
+      format.html { redirect_to currentskills_url, notice: 'Skill was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

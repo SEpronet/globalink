@@ -58,51 +58,17 @@
 
 /*************UNSIGNED USER**********/
 .user_basic .add_friend{
-	height: 35px;
-	width: 75px;
-	padding: 9px 10px;
-	border-radius: 5px;
-	background-color: #3E606F;
 	display: block;
 	position: absolute;
 	left: 85%;
 	top: 160px;
-	font-size: 20px;
-	color: #D4D8DB;
-	text-decoration: none !important;
-
-	-moz-box-shadow: 0 0 5px #888;
-	-webkit-box-shadow: 0 0 5px#888;
-	box-shadow: 0 0 5px #888;
-}
-
-.add_friend:hover{
-	background-color: #2E4752;
-	-webkit-animation-timing-function: ease-in;
 }
 
 .user_basic .message{
-	height: 35px;
-	width: 45px;
-	padding: 4px 9px;
-	border-radius: 5px;
-	background-color: #51A651;
 	display: block;
 	position: absolute;
 	left: 81%;
 	top: 160px;
-	font-size: 25px;
-	color: #D4D8DB;
-	text-decoration: none !important;
-
-	-moz-box-shadow: 0 0 2px #888;
-	-webkit-box-shadow: 0 0 2px#888;
-	box-shadow: 0 0 2px #888;
-}
-
-.message:hover{
-	background-color: #3A7E4D;
-	-webkit-animation-timing-function: ease-in;
 }
 
 /***********************************/
@@ -250,4 +216,29 @@
 	left: 980px;
 	margin-top: 30px;
 	text-decoration: none;
+}
+
+.user .heading{
+	display: block;
+	height: 100px;
+	width: 600px;
+	margin: auto;
+	position: relative;
+	text-align: center;
+	font-family: "tahoma";
+	font-style: bold;
+	font-size: 70px;
+	margin-top: 10px;
+	color: #3DC39E;
+}
+
+.divide-line{
+	display: block;
+	position: relative;
+	height: 1px;
+	width: 75%;
+	margin-right: auto;
+	margin-left: auto;
+	border-bottom: solid 1px;
+	border-color: #90a4ae;
 }

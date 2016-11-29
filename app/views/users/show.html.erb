@@ -5,23 +5,115 @@
 			<%= @user.firstname %> <%= @user.lastname %></br>
 			<div id = "title"><%= @user.title %></div>
 		</div>
-			<%= link_to "Add", friendships_path(:friend_id => @user.id), :method => :post, class: 'add_friend fa fa-plus' %>
-        	
-        	<a href = "#" class = "message fa fa-envelope"></a>
+			<% if @not_friends %>
+        <%= link_to '<i class="material-icons">add</i>'.html_safe, friendships_path(:friend_id => @user.id), :method => :post, class: 'add_friend btn-floating waves-effect waves-light hoverable' %> 
+      <% else %> 	
+        <a href = "#" class = "message btn-floating waves-effect green hoverable"><i class="large material-icons">email</i></a>
+      <% end %>
 	</div>
- 	<%if @show_exists %>
-  <div class = "profile_info">  
-    <div class = "title">Bio</div>
-    <div class = "content"><%= @profile.bio %></div>
-  </div>
-  <div class = "profile_info">
-    <div class = "title">Interests</div>
-    <div class = "content"><%= @profile.interests %></div>
-  </div>
-</div>              
 
-<% else %>
-<div class = "new_profile">
-  <center><div id = "no_show">Nothing to show here.</div>
+  <div class = "heading">Overview</div>
+ 	<%if @show_exists %>
+    <div class = "profile_info">  
+      <div class = "title">Bio</div>
+      <div class = "content"><%= @profile.bio %></div>
+    </div>
+    <div class = "profile_info">
+      <div class = "title">Interests</div>
+      <div class = "content"><%= @profile.interests %></div>
+    </div>
 </div>
+  <% else %>
+  <div class = "new_profile">
+    <center><div id = "no_show">Nothing to show here.</div>
+  </div>
 <% end %>
+
+<div class="divide-line"></div>
+
+<div class = "user">
+  <div class = "heading">Education</div>
+</div>
+
+<%if @show_education %>
+  <% @education.each do |education| %>
+    <%if education.user.id == @user.id %>
+      <div class = "education-block">  
+        <div class = "title">Institution</div>
+        <div class = "content"><%= education.name %></div>
+        <div class = "title">Location</div>
+        <div class = "content"><%= education.location %></div>
+        <div class = "row">
+          <div class = "title">Enrollment</div>
+          <div class = "content"><%= education.enroll %></div>
+          <div class = "title">Graduation</div>
+          <div class = "content"><%= education.grad %></div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% else %>  
+  <div class = "new_profile">
+    <center><div id = "no_show">Nothing to show here.</div>
+  </div>
+<% end %>
+
+<div class="divide-line"></div>
+
+<div class = "user">
+  <div class = "heading">Skills</div>
+</div>
+
+<%if @show_skill %>
+  <% @skills.each do |skill| %>
+    <%if skill.user.id == @user.id %>
+      <div class = "skill-block">  
+        <div class = "content"><%= skill.name %></div>
+      </div>
+    <% end %>
+  <% end %>
+<% else %>
+  <div class = "new_profile">
+    <center><div id = "no_show">Nothing to show here.</div>
+  </div>
+<% end %>
+
+<div class="divide-line"></div>
+
+<div class = "user">
+  <div class = "heading">Experiences</div>
+</div>
+
+<%if @show_experience %>
+
+  <% @experience.each do |experience| %>
+    <%if experience.user.id == @user.id %>
+      <div class = "education-block">  
+        <div class = "title">Company</div>
+        <div class = "content"><%= experience.company_name %></div>
+        <div class = "title">Title</div>
+        <div class = "content"><%= experience.title %></div>
+        <div class = "row">
+        <div class = "title">Location</div>
+        <div class = "content"><%= experience.location %></div>
+        <div class = "title">Duration</div>
+        <div class="col s3">
+          <div class = "experience-from"><%= experience.from %></div>
+        </div>
+        <div class="col s3">
+          <div class = "TO">To</div>
+        </div>
+        <div class="col s3">
+          <div class = "experience-to"><%= experience.to %></div>
+        </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+<% else %>
+  <div class = "new_profile">
+    <center><div id = "no_show">Nothing to show here.</div>
+  </div>
+<% end %>
+
+<div class="divide-line"></div>
