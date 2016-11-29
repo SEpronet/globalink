@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get 'pages/user_experiences'
   get 'pages/newsfeed'
 
+  get 'conversations', to: 'conversations#index', as: :conversations
+
   get '/newsfeed' => "pages#newsfeed", as: :user_root
   get '/user_profile' => "pages#user_profile"
   get '/user_skills' => "pages#user_skills"
