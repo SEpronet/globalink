@@ -1,5 +1,9 @@
+Gemfile.lock
+
 config/database.yml
 
 /log
-
+/public/system/users/avatars/*
 /tmp
+/.idea
+Gemfile.lock
