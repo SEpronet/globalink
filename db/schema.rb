@@ -70,7 +70,6 @@ ActiveRecord::Schema.define(version: 20161128004157) do
     t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
   end
 
-<<<<<<< HEAD
   create_table "profiles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "bio",        limit: 65535
     t.text     "interests",  limit: 65535
@@ -88,8 +87,6 @@ ActiveRecord::Schema.define(version: 20161128004157) do
     t.index ["user_id"], name: "index_skills_on_user_id", using: :btree
   end
 
-=======
->>>>>>> e776dca... Add conversations to user model, routes
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -115,27 +112,9 @@ ActiveRecord::Schema.define(version: 20161128004157) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-<<<<<<< HEAD
-  create_table "votes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "votable_type"
-    t.integer  "votable_id"
-    t.string   "voter_type"
-    t.integer  "voter_id"
-    t.boolean  "vote_flag"
-    t.string   "vote_scope"
-    t.integer  "vote_weight"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope", using: :btree
-    t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
-  end
-
   add_foreign_key "educations", "users"
   add_foreign_key "experiences", "users"
   add_foreign_key "posts", "users"
   add_foreign_key "profiles", "users"
   add_foreign_key "skills", "users"
-=======
-  add_foreign_key "posts", "users"
->>>>>>> e776dca... Add conversations to user model, routes
 end
