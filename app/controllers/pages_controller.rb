@@ -44,6 +44,10 @@ class PagesController < ApplicationController
     end
   end
 
+  def connects
+    @friendships = Friendship.all
+  end
+
   def profile_post_search_results
     @search_new = Search.new 
     @searches = Search.all
