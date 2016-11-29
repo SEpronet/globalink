@@ -19,10 +19,6 @@
   	<div class = "heading">Search Results</div>
 	</div>
 	<div class="col s6 offset-s6">
-		<% @searches.each do |search| %>
-			<% @key = search.search_field %>
-
-		<% end %>
 		<% if @key.include? "#" %>
 			<% @post_list.each do |post| %>
 				<div class="section">

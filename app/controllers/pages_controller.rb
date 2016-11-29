@@ -52,7 +52,10 @@ class PagesController < ApplicationController
 
     @searches.each do |search|
       #this key is what the user entered
-      @key = search.search_field
+      unless search==nil
+        @key = search.search_field
+        break
+      end
     end 
 
     @post_list = Array.new
@@ -73,7 +76,7 @@ class PagesController < ApplicationController
       end
     end
 
-    Search.delete_all
+    # Search.delete_all
   end
 
   def search_results
