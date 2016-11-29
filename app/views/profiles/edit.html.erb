@@ -11,10 +11,8 @@
 
 <div class = "new_profile">
 	<div class = "heading">Edit Overview</div>
-	<div class = "move-left">
-		<%= render 'form', profile: @profile %> 
-		<div class = "profile_back">
-			<%= link_to 'Cancel', {controller: "pages", action: "user_profile", class: 'back_link waves-light'} %>
-		</div>
+	<%= render 'form', profile: @profile %> 
+	<div class = "profile_back">
+		<%= link_to 'Cancel', currentprofile_path, class: 'back_link waves-light' %>
 	</div>
 </div>

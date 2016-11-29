@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    commontator_thread_show(@post)
   end
 
   # GET /posts/new
@@ -29,9 +30,9 @@ class PostsController < ApplicationController
     post.user = current_user
   end
   if @post.save
-    redirect_to :controller => 'pages', :action => 'newsfeed' 
+    redirect_to newsfeed_url 
   else
-    redirect_to :controller => 'pages', :action => 'newsfeed', notice: @post.errors.full_messages.first
+    redirect_to newsfeed_url, notice: @post.errors.full_messages.first
   end
 end
 =begin
@@ -54,7 +55,7 @@ end
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.html { redirect_to newsfeed_url, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -68,7 +69,7 @@ end
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to :controller => 'pages', :action => 'newsfeed', notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to newsfeed_url, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

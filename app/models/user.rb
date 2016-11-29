@@ -13,4 +13,6 @@ has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "fri
 has_many :inverse_friends, :through => :inverse_friendships, :source => :user
 has_one :profile
 has_many :skills
+
+acts_as_commontator
 end

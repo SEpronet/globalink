@@ -11,11 +11,6 @@
 
 	<div class = "new_profile heading">Getting Started</div>
 
-	<div class = "move-left">
-
-		<%= render 'form', profile: @profile %>
-
-		<div class = "new_profile profile_back">
-			<%= link_to 'Cancel', {controller: "pages", action: "user_profile", class: 'back_link'} %>
-		</div>
+	<div class = "profile_back">
+		<%= link_to 'Cancel', currentprofile_url, class: 'back_link' %>
 	</div>
