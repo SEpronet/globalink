@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129073945) do
+ActiveRecord::Schema.define(version: 20161129101112) do
 
   create_table "commontator_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "creator_type"
@@ -51,15 +51,14 @@ ActiveRecord::Schema.define(version: 20161129073945) do
     t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true, using: :btree
   end
 
-  create_table "contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "law_id"
-    t.integer  "parent_id"
-    t.string   "titel"
-    t.string   "text"
-    t.string   "content"
-    t.string   "url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "location"
+    t.text     "about",      limit: 65535
+    t.integer  "user_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["user_id"], name: "index_companies_on_user_id", using: :btree
   end
 
   create_table "educations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -148,6 +147,10 @@ ActiveRecord::Schema.define(version: 20161129073945) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+<<<<<<< HEAD
+=======
+  add_foreign_key "companies", "users"
+>>>>>>> 2100c109b9477067f8bb322e1ceb4b5b2d8eba79
   add_foreign_key "educations", "users"
   add_foreign_key "experiences", "users"
   add_foreign_key "posts", "users"
