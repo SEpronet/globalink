@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129073945) do
+ActiveRecord::Schema.define(version: 20161129101112) do
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title",            limit: 50,    default: ""
@@ -63,6 +63,16 @@ ActiveRecord::Schema.define(version: 20161129073945) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true, using: :btree
+  end
+
+  create_table "companies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.string   "location"
+    t.text     "about",      limit: 65535
+    t.integer  "user_id"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["user_id"], name: "index_companies_on_user_id", using: :btree
   end
 
   create_table "educations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -167,6 +177,7 @@ ActiveRecord::Schema.define(version: 20161129073945) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope", using: :btree
   end
 
+  add_foreign_key "companies", "users"
   add_foreign_key "educations", "users"
   add_foreign_key "experiences", "users"
   add_foreign_key "posts", "users"
