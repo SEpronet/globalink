@@ -3,7 +3,6 @@
 		<%= image_tag(@user.avatar.url, size: "200x200", :alt => "default profile photo", class: 'photo') %>
 		<div class = "name">
 			<%= @user.firstname %> <%= @user.lastname %></br>
-			<div id = "title"><%= @user.title %></div>
 		</div>
 			<% if @not_friends %>
         <%= link_to '<i class="material-icons">add</i>'.html_safe, friendships_path(:friend_id => @user.id), :method => :post, class: 'add_friend btn-floating waves-effect waves-light hoverable' %> 

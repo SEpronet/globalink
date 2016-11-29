@@ -12,17 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20161129004004) do
 
-  create_table "contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "law_id"
-    t.integer  "parent_id"
-    t.string   "titel"
-    t.string   "text"
-    t.string   "content"
-    t.string   "url"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "commontator_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "creator_type"
     t.integer  "creator_id"
@@ -60,6 +49,17 @@ ActiveRecord::Schema.define(version: 20161129004004) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true, using: :btree
+  end
+
+  create_table "contents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "law_id"
+    t.integer  "parent_id"
+    t.string   "titel"
+    t.string   "text"
+    t.string   "content"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "educations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

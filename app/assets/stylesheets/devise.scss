@@ -9,7 +9,7 @@
 }
 
 .form-bg {
-	background-color: #e7e5e4 !important;
+	background-color: #fff !important;
 }
 
 .relative{
@@ -21,14 +21,14 @@
 
 .elegantshadow {
   margin-top: 30px;
-	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+	font: Verdana;
   font-size: 110px !important;
   padding: 10px 50px;
   text-align: center;
   text-transform: uppercase;
   text-rendering: optimizeLegibility;
     color: #131313;
-    background-color: #e7e5e4;
+    background-color: #fff;
     letter-spacing: .15em;
     text-shadow: 
       1px -1px 0 #767676, 
@@ -109,7 +109,7 @@ box-shadow: 0 0 8px #595959; }
 input:focus ~ .labe, input:valid ~ .labe 		{
   top:-20px;
   font-size:14px;
-  color:#5264AE;
+  color:#00897B;
 }
 
 /* Button=================================*/
